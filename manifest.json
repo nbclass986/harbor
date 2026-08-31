@@ -1,0 +1,10 @@
+{
+  "id": "harbor",
+  "name": "Harbor",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Local-first task, project, and resource boards for Markdown notes.",
+  "author": "nbclass986",
+  "authorUrl": "https://github.com/nbclass986/harbor",
+  "isDesktopOnly": false
+}

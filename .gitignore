@@ -1,0 +1,11 @@
+node_modules/
+*.js.map
+.DS_Store
+Thumbs.db
+开发/
+src/
+package.json
+package-lock.json
+tsconfig.json
+esbuild.config.mjs
+versions.json
