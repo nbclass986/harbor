@@ -6,7 +6,7 @@ Harbor 是一个 [Obsidian](https://obsidian.md) 插件。
 
 笔记按 **PRT** 分类，推进方式对齐 **GTD** 和 **PARA**（项目要出结果，资料只备查，任务是下一步动作）。
 
-界面语言：自动 / English / 简体中文。把笔记推到 Notion 是可选的，默认关闭。
+界面语言：自动 / English / 简体中文。把笔记推到 Notion 是可选的，默认关闭，这个功能还在开发中。
 
 ---
 
@@ -112,7 +112,7 @@ tags: writing
 - **迷你日历**：侧栏看近期和逾期。
 - **窗口**：标签页、侧栏或浮动窗。
 - **模板**：新建时插入正文，可用 `{{title}}`。
-- **推到 Notion（可选）**：若还要云端副本，可把笔记推到三个 Notion 数据库，页面地址写回 `notion-link`。多视图本身不需要开这个。
+- **推到 Notion（可选，开发中）**：以后可以把笔记推到三个 Notion 数据库。现在默认关闭，多视图不依赖它。
 
 ---
 
@@ -126,9 +126,9 @@ tags: writing
 | 新建任务 / 新建项目 / 新建资源 | 弹出新建卡片 |
 | 快速新建任务 | 直接建一条任务 |
 | 打开属性 | 重新打开属性条 |
-| 同步当前笔记到 Notion | 需先打开 Notion |
-| 同步已联动笔记到 Notion | 批量推已有链接的笔记 |
-| 打开 Notion 页面 | 打开当前笔记对应的 Notion 页 |
+| 同步当前笔记到 Notion | 开发中 |
+| 同步已联动笔记到 Notion | 开发中 |
+| 打开 Notion 页面 | 开发中 |
 
 ---
 
@@ -138,13 +138,13 @@ tags: writing
 - 文件夹路径、归档方式、是否扫描全库。
 - 状态、优先级、人员、标签。
 - 三类笔记的正文模板。
-- Notion：token，以及任务 / 项目 / 资料三个数据库 ID。
+- Notion（开发中）：token，以及任务 / 项目 / 资料三个数据库 ID。
 
 ---
 
 ## 数据
 
-笔记就是库里的 Markdown。关掉 Notion 时不访问外网。打开后，只有执行同步命令才会请求 Notion API。
+笔记就是库里的 Markdown。Notion 同步还在开发中，默认关闭，关闭时不访问外网。
 
 ---
 
@@ -162,7 +162,7 @@ The point is Notion-style **many views on the same notes**, inside Obsidian. Boa
 
 Notes are typed with **PRT**. The workflow follows **GTD** and **PARA**: projects have an outcome, resources are reference, tasks are next actions.
 
-UI language: auto / English / 简体中文. Pushing notes to Notion is optional and off by default.
+UI language: auto / English / 简体中文. Pushing notes to Notion is optional, off by default, and still in development.
 
 ## The idea
 
@@ -234,11 +234,11 @@ Status defaults: `Inbox`, `Open`, `Doing`, `Done`. Priority defaults: `P1`, `P2`
 
 ## What you can do
 
-Notion-style views on the same notes: board, gallery, calendar, and a Bases table on project notes. Drag a card to write YAML. Filter, sort, and save views. Property bar on PRT notes. Project detail window. Mini calendar. Tab, sidebar, or floating window. Body templates with `{{title}}`. Optional Notion push writes the page URL to `notion-link`; the views do not need that.
+Notion-style views on the same notes: board, gallery, calendar, and a Bases table on project notes. Drag a card to write YAML. Filter, sort, and save views. Property bar on PRT notes. Project detail window. Mini calendar. Tab, sidebar, or floating window. Body templates with `{{title}}`. Optional Notion push is still in development; the views do not need it.
 
 ## Privacy
 
-Notes stay in the vault. With Notion off, Harbor does not call the network. With Notion on, it talks to the Notion API only when you run a sync command.
+Notes stay in the vault. Notion sync is still in development and off by default. With it off, Harbor does not call the network.
 
 ## License
 
