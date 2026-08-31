@@ -2,15 +2,27 @@
 
 Harbor 是一个 [Obsidian](https://obsidian.md) 插件。
 
-它按 **PRT** 组织笔记，按 **GTD** 推进工作。笔记仍是库里的 Markdown，看板、日历、属性条都读写同一份 YAML，不另建数据库。
+核心是：在 Obsidian 里做出 Notion 那种**同一批笔记、多种视图**。看板、画廊、日历、表格看的是库里的 Markdown，拖卡片、改日期、改状态，写回同一份 YAML。不另建数据库，也不必把工作搬到 Notion 才能换视图。
 
-界面语言：自动 / English / 简体中文。Notion 同步可选，默认关闭。
+笔记按 **PRT** 分类，推进方式对齐 **GTD** 和 **PARA**（项目要出结果，资料只备查，任务是下一步动作）。
+
+界面语言：自动 / English / 简体中文。把笔记推到 Notion 是可选的，默认关闭。
 
 ---
 
 ## 核心思想
 
-**PRT** 把事情拆成三类，互不混用：
+**同一批笔记，多种视图**（Notion 数据库那种用法）：
+
+| 视图 | 做什么 |
+| --- | --- |
+| 看板 | 按状态、优先级或负责人分列，拖卡片改 YAML |
+| 画廊 | 一张张卡片浏览 |
+| 日历 | 月 / 周 / 日 / 议程，按截止日期排 |
+| 表格 | 项目笔记里嵌入 Bases，看挂在该项目下的任务 |
+| 已保存视图 | 筛选和排序记住，下次直接打开 |
+
+**PRT** 把事情拆成三类，互不混用。这也是 **PARA** 里「项目 / 资料」和 **GTD** 里「下一步行动」合在一起的写法：
 
 | 类型 | YAML | 是什么 |
 | --- | --- | --- |
@@ -92,7 +104,7 @@ tags: writing
 
 ## 能做什么
 
-- **看板 / 画廊 / 日历**：按状态、优先级或负责人分组；日历有月、周、日、议程。
+- **Notion 式多视图**：同一批任务/项目/资料，在看板、画廊、日历之间切换；项目里用 Bases 表格看关联任务。
 - **拖卡片即改 YAML**：换列、改日期，写回笔记。
 - **筛选和排序**：状态、优先级、负责人、标签、项目、截止日期、开始日期；可保存视图。
 - **属性条**：打开 PRT 笔记时，在编辑器上方改字段。
@@ -100,7 +112,7 @@ tags: writing
 - **迷你日历**：侧栏看近期和逾期。
 - **窗口**：标签页、侧栏或浮动窗。
 - **模板**：新建时插入正文，可用 `{{title}}`。
-- **Notion（可选）**：把笔记推到三个 Notion 数据库，页面地址写回 `notion-link`。
+- **推到 Notion（可选）**：若还要云端副本，可把笔记推到三个 Notion 数据库，页面地址写回 `notion-link`。多视图本身不需要开这个。
 
 ---
 
@@ -146,13 +158,25 @@ MIT
 
 Harbor is an [Obsidian](https://obsidian.md) plugin.
 
-It organizes notes with **PRT** and moves work with **GTD**. Notes stay Markdown in your vault. The board, calendar, and property bar read and write the same YAML. There is no separate database.
+The point is Notion-style **many views on the same notes**, inside Obsidian. Board, gallery, calendar, and table all read the Markdown in your vault. Drag a card or change a date, and the same YAML is written back. You do not need a separate database, and you do not need to move the work to Notion just to switch views.
 
-UI language: auto / English / 简体中文. Notion sync is optional and off by default.
+Notes are typed with **PRT**. The workflow follows **GTD** and **PARA**: projects have an outcome, resources are reference, tasks are next actions.
+
+UI language: auto / English / 简体中文. Pushing notes to Notion is optional and off by default.
 
 ## The idea
 
-**PRT** splits work into three types and does not mix them:
+**One set of notes, several views** (the Notion-database habit):
+
+| View | What it does |
+| --- | --- |
+| Board | Columns by status, priority, or assignee. Drag a card to write YAML. |
+| Gallery | Browse cards. |
+| Calendar | Month / week / day / agenda by due date. |
+| Table | A Bases embed on a project note lists tasks linked to that project. |
+| Saved views | Keep a filter and sort, open it again later. |
+
+**PRT** splits work into three types and does not mix them. That is PARA’s project / resource split plus GTD’s next action:
 
 | Type | YAML | Meaning |
 | --- | --- | --- |
@@ -210,7 +234,7 @@ Status defaults: `Inbox`, `Open`, `Doing`, `Done`. Priority defaults: `P1`, `P2`
 
 ## What you can do
 
-Board, gallery, and calendar. Drag a card to write YAML. Filter, sort, and save views. Property bar on PRT notes. Project detail window. Mini calendar. Tab, sidebar, or floating window. Body templates with `{{title}}`. Optional Notion push, which writes the page URL to `notion-link`.
+Notion-style views on the same notes: board, gallery, calendar, and a Bases table on project notes. Drag a card to write YAML. Filter, sort, and save views. Property bar on PRT notes. Project detail window. Mini calendar. Tab, sidebar, or floating window. Body templates with `{{title}}`. Optional Notion push writes the page URL to `notion-link`; the views do not need that.
 
 ## Privacy
 
