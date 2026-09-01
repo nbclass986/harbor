@@ -349,6 +349,27 @@ body {
   min-width: 220px;
 }
 
+.nbclass-create-body-row {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.nbclass-create-body-row .setting-item-info,
+.nbclass-create-body-row .setting-item-control {
+  width: 100%;
+}
+
+.nbclass-create-body-row .setting-item-control {
+  justify-content: stretch;
+}
+
+.nbclass-create-body-row textarea {
+  width: 100%;
+  min-height: 120px;
+  resize: vertical;
+}
+
 .nbclass-field-map {
   width: 100%;
   max-width: 640px;
@@ -509,6 +530,155 @@ body {
   padding: 4px 0;
 }
 
+.nbclass-prop-row-value,
+.nbclass-prop-inline-value {
+  min-width: 0;
+}
+
+.nbclass-prop-pills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  width: 100%;
+}
+
+.nbclass-prop-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  margin: 0;
+  border-radius: 4px;
+  font-size: 13.5px;
+  line-height: 1.4;
+  background: var(--background-modifier-hover, rgba(0, 0, 0, 0.05));
+  color: var(--text-normal);
+  border: 1px solid transparent;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.nbclass-prop-pill--project {
+  background: rgba(123, 31, 162, 0.08);
+  color: #7b1fa2;
+  border: 1px solid rgba(123, 31, 162, 0.12);
+  gap: 4px;
+  padding-right: 6px;
+}
+
+.nbclass-prop-pill--project:hover {
+  background: rgba(123, 31, 162, 0.14);
+}
+
+.nbclass-prop-pill--person {
+  background: rgba(21, 101, 192, 0.08);
+  color: #1565c0;
+  border: 1px solid rgba(21, 101, 192, 0.12);
+  padding-right: 6px;
+  gap: 4px;
+}
+
+.nbclass-prop-pill--tag {
+  background: rgba(46, 125, 50, 0.08);
+  color: #2e7d32;
+  border: 1px solid rgba(46, 125, 50, 0.12);
+  padding-right: 6px;
+  gap: 4px;
+}
+
+.nbclass-prop-check-row {
+  border-radius: 6px;
+  margin: 2px 0;
+}
+
+.nbclass-prop-check-row:hover {
+  background: var(--background-modifier-hover, rgba(0, 0, 0, 0.04));
+}
+
+.nbclass-prop-check-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-normal);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nbclass-prop-check-label input[type="checkbox"] {
+  flex-shrink: 0;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.nbclass-prop-check-text {
+  flex: 1;
+  min-width: 0;
+  word-break: break-word;
+}
+
+.nbclass-prop-pill-link {
+  cursor: pointer;
+  text-decoration: none;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nbclass-prop-pill-link:hover {
+  text-decoration: underline;
+}
+
+.nbclass-prop-pill-remove {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin-left: 2px;
+  border-radius: 999px;
+  font-size: 13px;
+  line-height: 1;
+  color: var(--text-muted);
+  cursor: pointer;
+  opacity: 0;
+}
+
+.nbclass-prop-pill:hover .nbclass-prop-pill-remove {
+  opacity: 1;
+}
+
+.nbclass-prop-pill-remove:hover {
+  background: rgba(0, 0, 0, 0.08);
+  color: var(--text-normal);
+}
+
+.nbclass-prop-pill-add {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13.5px;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px dashed var(--background-modifier-border, rgba(0, 0, 0, 0.15));
+  padding: 2px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nbclass-prop-pill-add:hover {
+  background: var(--background-modifier-hover, rgba(0, 0, 0, 0.04));
+  border-color: var(--text-muted);
+  color: var(--text-normal);
+}
+
 .nbclass-prop-pill-select-wrap {
   display: inline-block;
   max-width: 100%;
@@ -609,6 +779,15 @@ button.nbclass-prop-dropdown-trigger {
   background: var(--background-modifier-hover);
 }
 
+.nbclass-prop-popover-item.is-pinned {
+  background: var(--nbclass-tint-orange-bg);
+  color: var(--nbclass-tint-orange-fg);
+}
+
+.nbclass-prop-popover-item.is-pinned:hover {
+  background: var(--nbclass-tint-orange-bd);
+}
+
 .nbclass-prop-popover-item.is-active {
   background: var(--interactive-accent);
   color: var(--text-on-accent, #fff);
@@ -624,6 +803,24 @@ button.nbclass-prop-dropdown-trigger {
   background: var(--nbclass-tint-blue-bg);
   color: var(--nbclass-tint-blue-fg);
   border-color: var(--nbclass-tint-blue-bd);
+}
+
+.nbclass-prop-type-select.nbclass-prop-type-task {
+  background: var(--nbclass-tint-blue-bg);
+  color: var(--nbclass-tint-blue-fg);
+  border-color: var(--nbclass-tint-blue-bd);
+}
+
+.nbclass-prop-type-select.nbclass-prop-type-project {
+  background: var(--nbclass-tint-orange-bg);
+  color: var(--nbclass-tint-orange-fg);
+  border-color: var(--nbclass-tint-orange-bd);
+}
+
+.nbclass-prop-type-select.nbclass-prop-type-resource {
+  background: var(--nbclass-tint-green-bg);
+  color: var(--nbclass-tint-green-fg);
+  border-color: var(--nbclass-tint-green-bd);
 }
 
 .nbclass-prop-priority-select.nbclass-prop-priority-p1,
@@ -922,4 +1119,62 @@ button.nbclass-prop-dropdown-trigger {
   background: var(--background-modifier-hover);
   color: var(--text-normal);
   border-radius: 6px;
+}
+
+.nbclass-project-create-row {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  max-width: 260px;
+  margin: 8px 0 16px;
+}
+
+.nbclass-project-create-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 14px;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.nbclass-project-create-btn::before {
+  content: '+';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.15em;
+  margin-right: 8px;
+  font-size: 1.15em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.nbclass-project-create-btn--blue {
+  background: var(--nbclass-tint-blue-bg);
+  color: var(--nbclass-tint-blue-fg);
+  border: 1px solid var(--nbclass-tint-blue-bd);
+}
+
+.nbclass-project-create-btn--orange {
+  background: var(--nbclass-tint-orange-bg);
+  color: var(--nbclass-tint-orange-fg);
+  border: 1px solid var(--nbclass-tint-orange-bd);
+}
+
+.nbclass-project-create-btn--green {
+  background: var(--nbclass-tint-green-bg);
+  color: var(--nbclass-tint-green-fg);
+  border: 1px solid var(--nbclass-tint-green-bd);
+}
+
+.nbclass-project-create-btn--purple {
+  background: var(--nbclass-tint-purple-bg);
+  color: var(--nbclass-tint-purple-fg);
+  border: 1px solid var(--nbclass-tint-purple-bd);
 }
