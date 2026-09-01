@@ -6,6 +6,8 @@ Harbor is an [Obsidian](https://obsidian.md) plugin. The same Markdown notes can
 
 Notes use **PRT**. The workflow follows **GTD** and **PARA**. UI language: auto / English / 简体中文. Notion sync is still in development.
 
+No Buttons or QuickAdd dependency.
+
 ---
 
 ## The idea
@@ -61,16 +63,24 @@ assignee: Alice
 participant: Bob
 tags: writing
 ---
-# Write the intro
+## Goal
+
+Write the intro
 ```
 
-Status: `Inbox`, `Open`, `Doing`, `Done`. Priority: `P1`, `P2`, `P3`. New projects embed `Harbor_TASK.base`.
+Status: `Inbox`, `Open`, `Doing`, `Done`. Priority: `P1`, `P2`, `P3`. The file name is the note title; the body does not repeat it as an H1. New projects embed `Harbor_TASK.base`, and under Tasks you get **New task** and **New resource** (assignee and participant come from the project; new tasks default to Open and P2).
 
 ---
 
 ## What you can do
 
-Switch board, gallery, and calendar. Drag cards. Filter, sort, and save views. Edit fields on the property bar. Open a project to see its tasks. Mini calendar. Tab, sidebar, or floating window. Templates with `{{title}}`.
+Switch board, gallery, and calendar. Drag cards. Filter, sort, and save views. The property bar title shows `task: filename` (or project / resource) and can change `type`. Open a project to see its tasks, or create a task or resource from the project note. Mini calendar. Tab, sidebar, or floating window. Templates use `{{title}}` and `{{body}}`; if `{{body}}` is missing, create-form text goes under the heading set in Settings.
+
+---
+
+## Settings
+
+Language, YAML keys, property-bar fields, folders, file layout, vault scan, status / priority / people / tags, the three body templates, and **Insert body under heading** for each template.
 
 ---
 
