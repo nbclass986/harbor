@@ -1689,7 +1689,7 @@ button.nbclass-prop-dropdown-trigger {
 .nbclass-shell .nbclass-create-page .setting-item-control :is(input,select) { width: 100%; }
 .nbclass-shell .nbclass-create-page .nbclass-create-body-row :is(.setting-item-info,.setting-item-control) { flex: auto; }
 .nbclass-shell .nbclass-create-page .nbclass-create-body-row { flex-direction: column; align-items: stretch; }
-.nbclass-shell .nbclass-create-page .nbclass-modal-actions { position: sticky; bottom: 0; padding: 12px 0; background: var(--background-primary); }
+.nbclass-shell .nbclass-create-page .nbclass-modal-actions { position: static; padding: 12px 0; background: var(--background-primary); }
 @container harbor (max-width: 600px) {
   .nbclass-shell .nbclass-create-page { padding: 12px; }
   .nbclass-shell .nbclass-create-page .setting-item { flex-wrap: wrap; gap: 8px; }

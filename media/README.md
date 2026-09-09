@@ -7,6 +7,9 @@ project, create, properties. Images show the candidate UI, not a published relea
 
 `view-steps.gif` is a four-key-frame **step demonstration, not a real-time recording**.
 Its frame durations do not measure search, rendering, view-switching or drag speed.
-No native drag-and-drop GIF is included: pointer-drop acceptance still needs verification.
+`drag-steps.gif` shows two actual application states: Capture ideas in Inbox and Open.
+The states were staged through the plugin's write path, then the original status
+was restored. It is a **step demonstration, not a native pointer recording**.
+Native single/multi-card and calendar drops were separately verified by the user.
 
 Screenshots and media are covered by the repository's Public Trial License.

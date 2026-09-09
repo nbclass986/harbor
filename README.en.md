@@ -18,6 +18,10 @@ Harbor is available as a free public trial through GitHub and BRAT. Development 
 
 ![View-switching step demonstration, not a real-time recording](media/view-steps.gif)
 
+![Inbox to Open state-change steps, not a native drag recording](media/drag-steps.gif)
+
+The state-change GIF uses actual application screenshots staged through the plugin write path; the original note status was restored. It is not a native pointer recording.
+
 All notes shown are fictional. The GIF uses key frames and does not demonstrate speed. More: [Gallery](media/gallery.png) · [Calendar](media/calendar.png) · [Table](media/table.png) · [Dark board](media/board-dark.png) · [Project details](media/project.png) · [Create dialog](media/create.png) · [Properties](media/properties.png).
 
 ### Candidate status
@@ -25,9 +29,9 @@ All notes shown are fictional. The GIF uses key frames and does not demonstrate 
 - Consistent navigation, toolbar and theme-aware styling. Board, gallery, table and timeline render in batches; search and filters still cover every match. Scroll or use the keyboard-accessible Load more button.
 - Fixes late-metadata cache invalidation, date writes on cancelled calendar drags, and project windows covering create dialogs.
 - Local Windows / Obsidian 1.13.7 diagnostics: hot search, filtering and view switches had **33.5–55.4 ms P95 at 1,000 tasks**, and **33.6–75.5 ms at 5,000** (20 samples each). These use synthetic in-memory metadata and real rendering, including two animation frames. They exclude input debounce, initial disk indexing and application cold boot; they are not guarantees for other devices.
-- Three directory modes, creation/writes, saved-view reload and 30 window-open/close cycles were checked. Desktop checks and screenshots cover default light/dark and Blue Topaz, but the full theme × size × interaction matrix remains incomplete.
+- Three directory modes, creation/writes, saved-view reload and 30 window-open/close cycles passed. All 54 focus, control hit-testing and scroll checks passed across default light/dark and Blue Topaz, 400/720/1200 px containers and six workbench pages. Fixed narrow-form actions covering the body field. This matrix does not cover every combination of every dialog.
 - Follow-up tests with real Markdown files on disk: maximum hot-operation P95 **49.7 ms at 1,000 tasks**, **76.0 ms at 5,000**. Metadata was already ready; this is not application cold boot. All 54 toolbar/form horizontal-boundary checks across three themes, three container widths and six pages passed; this is not full interaction acceptance.
-- Native single-card dragging was verified by the user. **Before release:** verify native multi-card drops, pointer-driven calendar rescheduling, disk cold start and the full visual interaction matrix. Actual BRAT install/update checks follow a Release. Physical mobile devices and live Notion sync are outside this round.
+- The user verified native single-card, multi-card and calendar drops. After a process restart, 1,000 disk tasks became usable in **1,891.4 ms** from renderer navigation time origin (one sample; Windows file cache not flushed; excludes launcher time). Actual BRAT install/update checks follow a Release. Physical mobile devices and live Notion sync are outside this round.
 
 ---
 

@@ -16,11 +16,14 @@ Local release candidate; not yet published.
 - Bounded first paint through progressive loading; all matches remain searchable.
 - Fix late metadata cache invalidation and cancelled calendar drags writing dates.
 - Fix floating-window layers covering Obsidian create dialogs.
+- Fix inline create-form actions obscuring the body field in narrow sidebars.
 - Curated fictional-demo screenshots and a clearly labeled key-frame GIF.
 
-Local desktop candidate checks are documented in the README. Native pointer
-drag/drop, cold-start and full theme/size acceptance remain pending. No 0.1.2
-Release has been created; BRAT installation and update acceptance is pending.
+Local desktop candidate checks are documented in the README. The user verified
+native single/multi-card and calendar drops. All 54 theme/size focus, hit-testing
+and scroll checks passed after the narrow-form fix. One measured process-cold
+startup reached first usable at 1.891 s (OS file cache not flushed).
+No 0.1.2 Release has been created; BRAT install/update acceptance is pending.
 
 ## 0.1.1 — 2026-09-01
 
