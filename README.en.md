@@ -26,7 +26,8 @@ All notes shown are fictional. The GIF uses key frames and does not demonstrate 
 - Fixes late-metadata cache invalidation, date writes on cancelled calendar drags, and project windows covering create dialogs.
 - Local Windows / Obsidian 1.13.7 diagnostics: hot search, filtering and view switches had **33.5–55.4 ms P95 at 1,000 tasks**, and **33.6–75.5 ms at 5,000** (20 samples each). These use synthetic in-memory metadata and real rendering, including two animation frames. They exclude input debounce, initial disk indexing and application cold boot; they are not guarantees for other devices.
 - Three directory modes, creation/writes, saved-view reload and 30 window-open/close cycles were checked. Desktop checks and screenshots cover default light/dark and Blue Topaz, but the full theme × size × interaction matrix remains incomplete.
-- **Before release:** verify native single/multi-card drops, pointer-driven calendar rescheduling, disk cold start and the full visual regression matrix. Actual BRAT install/update checks follow a Release. Physical mobile devices and live Notion sync are outside this round.
+- Follow-up tests with real Markdown files on disk: maximum hot-operation P95 **49.7 ms at 1,000 tasks**, **76.0 ms at 5,000**. Metadata was already ready; this is not application cold boot. All 54 toolbar/form horizontal-boundary checks across three themes, three container widths and six pages passed; this is not full interaction acceptance.
+- Native single-card dragging was verified by the user. **Before release:** verify native multi-card drops, pointer-driven calendar rescheduling, disk cold start and the full visual interaction matrix. Actual BRAT install/update checks follow a Release. Physical mobile devices and live Notion sync are outside this round.
 
 ---
 
