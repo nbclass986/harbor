@@ -10,6 +10,24 @@ No Buttons or QuickAdd dependency.
 
 Harbor is available as a free public trial through GitHub and BRAT. Development source code is not currently published. Report problems through [Issues](https://github.com/nbclass986/harbor/issues).
 
+> The files on this branch are the **0.1.2 desktop candidate**, not a published Release. BRAT installation and updates follow Releases. A successful local load is not BRAT acceptance.
+
+## Workbench preview
+
+![Harbor board in Blue Topaz light](media/board.png)
+
+![View-switching step demonstration, not a real-time recording](media/view-steps.gif)
+
+All notes shown are fictional. The GIF uses key frames and does not demonstrate speed. More: [Gallery](media/gallery.png) · [Calendar](media/calendar.png) · [Table](media/table.png) · [Dark board](media/board-dark.png) · [Project details](media/project.png) · [Create dialog](media/create.png) · [Properties](media/properties.png).
+
+### Candidate status
+
+- Consistent navigation, toolbar and theme-aware styling. Board, gallery, table and timeline render in batches; search and filters still cover every match. Scroll or use the keyboard-accessible Load more button.
+- Fixes late-metadata cache invalidation, date writes on cancelled calendar drags, and project windows covering create dialogs.
+- Local Windows / Obsidian 1.13.7 diagnostics: hot search, filtering and view switches had **33.5–55.4 ms P95 at 1,000 tasks**, and **33.6–75.5 ms at 5,000** (20 samples each). These use synthetic in-memory metadata and real rendering, including two animation frames. They exclude input debounce, initial disk indexing and application cold boot; they are not guarantees for other devices.
+- Three directory modes, creation/writes, saved-view reload and 30 window-open/close cycles were checked. Desktop checks and screenshots cover default light/dark and Blue Topaz, but the full theme × size × interaction matrix remains incomplete.
+- **Before release:** verify native single/multi-card drops, pointer-driven calendar rescheduling, disk cold start and the full visual regression matrix. Actual BRAT install/update checks follow a Release. Physical mobile devices and live Notion sync are outside this round.
+
 ---
 
 ## The idea

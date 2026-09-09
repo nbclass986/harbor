@@ -10,6 +10,24 @@ Harbor 是一个 [Obsidian](https://obsidian.md) 插件：同一批 Markdown 笔
 
 目前通过 GitHub + BRAT 免费公开试用，开发源码暂不公开。欢迎在 [Issues](https://github.com/nbclass986/harbor/issues) 反馈问题。
 
+> 当前仓库文件为 **0.1.2 桌面候选版**，尚未创建对应 Release。BRAT 安装和自动更新仍以 Releases 为准；本地候选包加载成功不代表 BRAT 已验收。
+
+## 工作台预览
+
+![Harbor 看板，Blue Topaz 浅色](media/board.png)
+
+![视图切换步骤演示，非实时录屏](media/view-steps.gif)
+
+以上均为虚构演示笔记。GIF 是关键帧步骤演示，不用于证明速度。更多画面：[画廊](media/gallery.png) · [日历](media/calendar.png) · [表格](media/table.png) · [深色看板](media/board-dark.png) · [项目详情](media/project.png) · [新建弹窗](media/create.png) · [属性条](media/properties.png)。
+
+### 0.1.2 候选版状态
+
+- 统一工作台导航、工具栏和主题配色；看板、画廊、表格及时间线采用分批渲染，搜索与筛选仍覆盖全部数据，可滚动或点击“加载更多”。
+- 修复元数据晚到时的缓存刷新、日历取消拖动误写日期，以及项目浮窗遮挡新建弹窗的问题。
+- Windows / Obsidian 1.13.7 本地诊断：1,000 条任务的热搜索、筛选和视图切换 P95 为 **33.5–55.4 ms**；5,000 条为 **33.6–75.5 ms**（每项 20 次）。这是内存合成元数据上的真实渲染路径，包含两帧等待，不包含输入防抖、磁盘初始索引或应用冷启动，也不代表所有设备的性能。
+- 三种目录模式创建／写入检查、保存视图重载、30 次窗口开关检查已执行。默认浅／深色与 Blue Topaz 已有桌面检查和截图，但完整主题×尺寸×交互矩阵尚未全部关闭。
+- **发布前待验收**：原生单卡／多卡拖放和日历鼠标改期、磁盘冷启动、完整主题尺寸回归。实际 BRAT 安装／更新须在 Release 后验证；手机实机与 Notion 联网同步不在本轮范围内。
+
 ---
 
 ## 核心思想

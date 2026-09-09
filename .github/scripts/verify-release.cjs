@@ -8,6 +8,10 @@ const allowed = new Set([
   '.github/scripts/verify-release.cjs', 'LICENSE',
   'README.md', 'README.en.md', 'CHANGELOG.md',
   'main.js', 'manifest.json', 'styles.css', 'versions.json',
+  'media/board.png', 'media/board-dark.png', 'media/gallery.png',
+  'media/calendar.png', 'media/table.png', 'media/project.png',
+  'media/create.png', 'media/properties.png', 'media/view-steps.gif',
+  'media/README.md',
 ]);
 const files = execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '-z'],
   { encoding: 'utf8' }).split('\0').filter(Boolean);
