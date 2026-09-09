@@ -1671,7 +1671,8 @@ button.nbclass-prop-dropdown-trigger {
 .nbclass-create-modal .nbclass-create-body-row { flex-direction: column; align-items: stretch; }
 .nbclass-create-modal .nbclass-create-body-row :is(.setting-item-info,.setting-item-control) { flex: 0 0 auto; }
 .nbclass-create-modal .nbclass-modal-actions { position: sticky; bottom: 0; padding: 12px 0; background: var(--background-primary); }
-.nbclass-create-modal :is(input,select,textarea):focus-visible { outline: 2px solid var(--interactive-accent); outline-offset: 2px; }
+.nbclass-create-modal :is(button,input,select,textarea,[tabindex="0"]):focus-visible,
+.nbclass-project-float :is(button,input,select,textarea,[tabindex="0"]):focus-visible { outline: 2px solid var(--interactive-accent); outline-offset: 2px; }
 @media (max-width: 480px) {
   .nbclass-create-modal .setting-item { flex-wrap: wrap; }
   .nbclass-create-modal .setting-item-info { flex-basis: 100%; }

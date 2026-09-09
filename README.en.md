@@ -26,6 +26,8 @@ All notes shown are fictional. The GIF uses key frames and does not demonstrate 
 
 ### Candidate status
 
+- Follow-up dialog checks passed 33/33: three themes, task/project/resource create dialogs at 400/720/1080 px, and project details at 720/1080 px. Fixed missing visible keyboard focus on several buttons and project controls. These are component-width checks, not physical mobile or every application viewport.
+
 - Consistent navigation, toolbar and theme-aware styling. Board, gallery, table and timeline render in batches; search and filters still cover every match. Scroll or use the keyboard-accessible Load more button.
 - Fixes late-metadata cache invalidation, date writes on cancelled calendar drags, and project windows covering create dialogs.
 - Local Windows / Obsidian 1.13.7 diagnostics: hot search, filtering and view switches had **33.5–55.4 ms P95 at 1,000 tasks**, and **33.6–75.5 ms at 5,000** (20 samples each). These use synthetic in-memory metadata and real rendering, including two animation frames. They exclude input debounce, initial disk indexing and application cold boot; they are not guarantees for other devices.

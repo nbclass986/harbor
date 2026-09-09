@@ -17,6 +17,7 @@ Local release candidate; not yet published.
 - Fix late metadata cache invalidation and cancelled calendar drags writing dates.
 - Fix floating-window layers covering Obsidian create dialogs.
 - Fix inline create-form actions obscuring the body field in narrow sidebars.
+- Fix missing keyboard focus indicators in create dialogs and project detail windows; 33 follow-up theme/width checks passed.
 - Curated fictional-demo screenshots and a clearly labeled key-frame GIF.
 
 Local desktop candidate checks are documented in the README. The user verified
