@@ -15,17 +15,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check plugin files
-        run: |
-          test -f main.js
-          test -f manifest.json
-          test -f styles.css
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check distribution and version
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name || github.ref_name }}
+        run: node .github/scripts/verify-release.cjs
       - uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.ref_name }}
+          tag_name: ${{ github.event.release.tag_name || github.ref_name }}
           files: |
             main.js
             manifest.json
             styles.css
+            LICENSE
           fail_on_unmatched_files: true
           make_latest: true

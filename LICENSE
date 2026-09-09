@@ -1,21 +1,29 @@
-MIT License
+Harbor Public Trial License
 
-Copyright (c) 2026 nbclass986
+Copyright (c) 2026 nbclass986. All rights reserved except as granted below.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This license applies to Harbor 0.1.2 and later versions distributed with
+this license. Versions 0.1.0 and 0.1.1 were distributed under the MIT
+License; this license does not replace or revoke those prior grants.
+Third-party components remain subject to their own licenses.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+You may download, install, and use the official Harbor plugin free of
+charge for personal use or internal use at work. You may make backup
+copies and install it on your own devices. This permission has no fixed
+expiration date for versions distributed under this license.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+No permission is granted to redistribute, sell, sublicense, or publish
+modified copies of Harbor without prior permission from the copyright
+holder. You are welcome to share links to the official repository and
+releases. Rights that cannot be restricted by applicable law are unaffected.
+
+Development source code is not provided during this public trial.
+Future versions may be released under different terms; no source-release
+date or future license is promised. Your notes and other user-created
+content remain yours and are not covered by these restrictions.
+
+The software is provided as is, without warranties of any kind. To the
+extent permitted by applicable law, the copyright holder is not liable
+for claims, damages, or other liability arising from use of the software.
+
+Official distribution and contact: https://github.com/nbclass986/harbor

@@ -8,6 +8,8 @@ Harbor 是一个 [Obsidian](https://obsidian.md) 插件：同一批 Markdown 笔
 
 不依赖 Buttons、QuickAdd。
 
+目前通过 GitHub + BRAT 免费公开试用，开发源码暂不公开。欢迎在 [Issues](https://github.com/nbclass986/harbor/issues) 反馈问题。
+
 ---
 
 ## 核心思想
@@ -18,8 +20,9 @@ Harbor 是一个 [Obsidian](https://obsidian.md) 插件：同一批 Markdown 笔
 | --- | --- |
 | 看板 | 按状态、优先级或负责人分列，拖卡片改 YAML |
 | 画廊 | 一张张卡片浏览 |
-| 日历 | 月 / 周 / 日 / 议程 |
-| 表格 | 项目笔记里嵌入 Bases，列出挂在该项目下的任务 |
+| 日历 | 月 / 周 / 日 / 议程 / 年 |
+| 表格 | 工作台表格；项目笔记也可嵌入 Bases 列出关联任务 |
+| 时间线 | 按截止日期的月份分组浏览 |
 | 已保存视图 | 记住筛选和排序 |
 
 三种类型：
@@ -47,7 +50,9 @@ YAML 键名可以在设置里改，例如把 `due` 写成 `截止日期`。
 
 更新用 **BRAT: Check for updates to all beta plugins**。
 
-或者从 [Releases](https://github.com/nbclass986/harbor/releases) 下载 `main.js`、`manifest.json`、`styles.css`，放到 `你的库/.obsidian/plugins/harbor/`。需要 Obsidian 1.5.0 或更高。
+或者从 [Releases](https://github.com/nbclass986/harbor/releases) 下载 `main.js`、`manifest.json`、`styles.css`，放到 `你的库/.obsidian/plugins/harbor/`。0.1.2 起需要 Obsidian 1.9.10 或更高；项目笔记中的关联任务表需要启用核心插件 **Bases（数据库）**。
+
+首次试用建议在测试库中进行。移动端尚待完整验收；Notion 同步为实验功能，默认关闭。启用并执行同步后，会与 Notion API 交换你选择同步的笔记内容。
 
 ---
 
@@ -64,7 +69,7 @@ YAML 键名可以在设置里改，例如把 `due` 写成 `截止日期`。
 
 点左侧网格图标，或运行 **打开 Harbor**。
 
-默认是**混合式**：新建进上面三个文件夹，带 `type` 的笔记也会上看板。还可以改成**集中式**（只看这三个文件夹）或**散落式**（新建进收件箱）。
+默认是**混合式**：新建进上面三个文件夹，带 `type` 的笔记也会上看板。还可以改成**集中式**（只看这三个文件夹）或**散落式**（新建项目时选位置，建项目文件夹，里面放项目笔记，并建 `task` / `resource` 子文件夹放关联笔记）。
 
 ---
 
@@ -126,6 +131,8 @@ tags: writing
 
 ---
 
-## License
+## 反馈与授权
 
-MIT
+反馈请附上 Harbor 和 Obsidian 版本、设备系统、复现步骤，以及不含私人内容的截图或示例笔记。请勿上传 Notion token 或插件的 `data.json`。
+
+0.1.2 起按 [免费试用许可](LICENSE) 提供，可免费用于个人及工作内部使用；不授予再分发、销售或发布修改版的许可。开发源码暂不公开，之后是否公开及时间另行公告。已经按 MIT 发布的 0.1.0 / 0.1.1 保留原授权。

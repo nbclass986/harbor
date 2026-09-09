@@ -8,4 +8,9 @@ package.json
 package-lock.json
 tsconfig.json
 esbuild.config.mjs
-versions.json
+# Publish compatibility metadata, but keep development files private.
+*.map
+.env
+.env.*
+.obsidian/
+data.json

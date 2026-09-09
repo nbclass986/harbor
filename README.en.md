@@ -8,6 +8,8 @@ Notes use **PRT**. The workflow follows **GTD** and **PARA**. UI language: auto 
 
 No Buttons or QuickAdd dependency.
 
+Harbor is available as a free public trial through GitHub and BRAT. Development source code is not currently published. Report problems through [Issues](https://github.com/nbclass986/harbor/issues).
+
 ---
 
 ## The idea
@@ -16,8 +18,9 @@ No Buttons or QuickAdd dependency.
 | --- | --- |
 | Board | Columns by status, priority, or assignee. Drag a card to write YAML. |
 | Gallery | Browse cards. |
-| Calendar | Month / week / day / agenda. |
-| Table | A Bases embed on a project lists its tasks. |
+| Calendar | Month / week / day / agenda / year. |
+| Table | A workspace table; project notes can also embed Bases to list related tasks. |
+| Timeline | Browse notes grouped by due-date month. |
 | Saved views | Keep a filter and sort. |
 
 | Type | YAML | Meaning |
@@ -36,7 +39,9 @@ YAML keys can be renamed in settings, for example `due` → `截止日期`.
 
 Use [BRAT](https://github.com/TfTHacker/obsidian42-brat): add [`nbclass986/harbor`](https://github.com/nbclass986/harbor), then enable **Harbor**. Updates: **BRAT: Check for updates to all beta plugins**.
 
-Or download `main.js`, `manifest.json`, and `styles.css` from [Releases](https://github.com/nbclass986/harbor/releases) into `Vault/.obsidian/plugins/harbor/`. Requires Obsidian 1.5.0+.
+Or download `main.js`, `manifest.json`, and `styles.css` from [Releases](https://github.com/nbclass986/harbor/releases) into `Vault/.obsidian/plugins/harbor/`. Starting with 0.1.2, Obsidian 1.9.10+ is required. Enable the **Bases** core plugin for related-task tables embedded in project notes.
+
+Try it in a test vault first. Mobile behavior still needs full validation. Notion sync is experimental and disabled by default; enabling and running it exchanges selected note content with the Notion API.
 
 ---
 
@@ -44,7 +49,7 @@ Or download `main.js`, `manifest.json`, and `styles.css` from [Releases](https:/
 
 Harbor creates `Harbor/Harbor_TASK`, `Harbor/Harbor_PROJECT`, `Harbor/Harbor_RESOURCE`, and `Harbor/Harbor_BASE`. Open it from the ribbon, or run **Open Harbor**.
 
-Default layout is **Hybrid**. **Central** and **Scattered** are in settings.
+Default layout is **Hybrid**. **Central** only reads the three Harbor folders. **Scattered**: pick a folder when you create a project; Harbor makes a project folder with the project note, plus `task/` and `resource/` for notes linked to it.
 
 ---
 
@@ -84,6 +89,8 @@ Language, YAML keys, property-bar fields, folders, file layout, vault scan, stat
 
 ---
 
-## License
+## Feedback and license
 
-MIT
+Include your Harbor and Obsidian versions, operating system, reproduction steps, and a screenshot or sample note without private content. Do not upload Notion tokens or the plugin's `data.json`.
+
+Starting with 0.1.2, the [Public Trial License](LICENSE) allows free personal and internal workplace use, but does not grant permission to redistribute, sell, or publish modified copies. Development source code is not currently published; any future source release will be announced separately. Versions 0.1.0 and 0.1.1 retain their original MIT license.
