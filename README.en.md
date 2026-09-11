@@ -10,7 +10,7 @@ From capturing an idea to moving a project forward, work inside your existing va
 
 [Download latest](https://github.com/nbclass986/harbor/releases/latest) · [Installation](#installation) · [Report an issue](https://github.com/nbclass986/harbor/issues) · [Changelog](CHANGELOG.md)
 
-> Currently a free public trial; development source is not published. Requires Obsidian **1.9.10+**. Tested locally on desktop; physical mobile testing and BRAT installation/automatic-update acceptance remain pending.
+> Currently a free public trial. Requires Obsidian **1.9.10+**. Tested locally on desktop; physical mobile testing and BRAT installation/automatic-update acceptance remain pending.
 
 ![Harbor workspace in a light theme](media/board.png)
 
@@ -151,4 +151,4 @@ Colors follow Obsidian's theme, while layout styles stay scoped to Harbor. Defau
 
 Questions, ideas and bug reports are welcome in [Issues](https://github.com/nbclass986/harbor/issues). Include Harbor and Obsidian versions, your operating system, reproduction steps and a screenshot or sample note with private information removed. **Do not upload Notion tokens or the plugin's `data.json`.**
 
-The current [Public Trial License](LICENSE) allows free personal and internal workplace use, but does not grant permission to redistribute, sell or publish modified copies. Development source is not currently published; any future source release will be announced separately. Earlier versions released under MIT retain their original license.
+The current [Public Trial License](LICENSE) allows free personal and internal workplace use, but does not grant permission to redistribute, sell or publish modified copies. Earlier versions released under MIT retain their original license.

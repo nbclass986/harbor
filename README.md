@@ -10,7 +10,7 @@ Harbor 是一款面向 [Obsidian](https://obsidian.md) 的本地优先工作台�
 
 [下载最新版](https://github.com/nbclass986/harbor/releases/latest) · [安装指南](#安装) · [反馈问题](https://github.com/nbclass986/harbor/issues) · [更新记录](CHANGELOG.md)
 
-> 目前为免费公开试用版，开发源码暂不公开。需要 Obsidian **1.9.10+**；已进行本地桌面验证，手机实机及 BRAT 安装／自动更新仍待单独验收。
+> 目前为免费公开试用版。需要 Obsidian **1.9.10+**；已进行本地桌面验证，手机实机及 BRAT 安装／自动更新仍待单独验收。
 
 ![Harbor 浅色主题工作台](media/board.png)
 
@@ -151,4 +151,4 @@ tags: writing
 
 欢迎在 [Issues](https://github.com/nbclass986/harbor/issues) 提交问题或建议。请附上插件与 Obsidian 版本、操作系统、复现步骤，以及去除私人信息的截图或示例笔记。**请勿上传 Notion token 或插件的 `data.json`。**
 
-当前版本按 [免费试用许可](LICENSE) 提供，可免费用于个人及工作内部使用；不授予再分发、销售或发布修改版的许可。开发源码暂不公开，未来是否公开及时间另行公告。此前按 MIT 发布的版本保留其原授权。
+当前版本按 [免费试用许可](LICENSE) 提供，可免费用于个人及工作内部使用；不授予再分发、销售或发布修改版的许可。此前按 MIT 发布的版本保留其原授权。
