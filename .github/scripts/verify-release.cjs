@@ -12,6 +12,7 @@ const allowed = new Set([
   'media/calendar.png', 'media/table.png', 'media/project.png',
   'media/create.png', 'media/properties.png', 'media/view-steps.gif',
   'media/README.md', 'media/drag-steps.gif', 'media/detail-steps.gif',
+  'media/docking-steps.gif',
 ]);
 const files = execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '-z'],
   { encoding: 'utf8' }).split('\0').filter(Boolean);

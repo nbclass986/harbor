@@ -17,3 +17,13 @@ It is a **step demonstration, not a native pointer recording or YAML write test*
 Native single/multi-card and calendar drops were separately verified by the user.
 
 Screenshots and media are covered by the repository's Public Trial License.
+
+## Project docking preview
+
+`docking-steps.gif` shows the local updated project chrome, not yet published in a
+Release. Three real Obsidian screenshots use isolated fictional in-memory data:
+expanded project, collapsed project, and Gallery with the same project still
+collapsed. Gallery was selected through the workspace layout menu. Frames are
+staged/assembled, not a real-time recording or a performance measurement. No
+vault notes were written. Unrelated app chrome and the right-edge overlay are
+excluded from the curated images.
