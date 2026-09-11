@@ -35,12 +35,13 @@ jobs:
           body: |
             ## Harbor ${{ github.event.release.tag_name || github.ref_name }}
 
-            - 新增“扫描库中已有取值”：按当前 YAML 映射补充状态、优先级、人员和标签，自动去重，保留已有选项，不修改笔记。
-            - 修复看板列宽拖动，支持更宽的列，并补齐项目详情中的列宽调整。
-            - 任务与项目面板固定显示对应类型，移除多余的数据来源入口，避免混入资料。
+            - 首次启用时自动创建“闪念胶囊”项目，默认位置为 `Harbor/Harbor_PROJECT/闪念胶囊.md`，旧用户升级后也会补建一次。
+            - 使用当前 YAML 类型映射与项目模板；已有同名笔记不覆盖、不重复创建，初始化后主动删除也不会自动重建。
+            - 项目窗口中的属性入口统一称为“属性面板”，设置中的中文字段说明改用“笔记属性名”，更方便入门用户理解。
 
-            Scan existing mapped YAML values into option lists without editing notes,
-            resize board columns, and keep task/project boards scoped to their own type.
+            Automatically create the 闪念胶囊 capture project on first initialization,
+            using current YAML mappings and the project template. Existing notes are preserved;
+            deleting the project after initialization does not cause it to be recreated.
 
             **安装 / Install:** BRAT 仓库地址 `nbclass986/harbor`，或将下面三个文件放入 `.obsidian/plugins/harbor/`。
             Use BRAT with `nbclass986/harbor`, or copy the three attached files into `.obsidian/plugins/harbor/`.

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.8
+
+- Rename the project property control to Property panel and simplify Chinese property-mapping terminology.
+- Automatically create a starter project named 闪念胶囊 in the configured project folder on first initialization, including for existing installations upgrading to this version.
+- Use the current YAML type mapping and project template. Preserve existing same-named notes and do not recreate the project after users delete it following initialization.
+
 ## 0.1.7
 
 - Scan existing vault values using current YAML mappings to supplement status, priority, people and tag options. Merge and deduplicate without editing notes or replacing existing options.
