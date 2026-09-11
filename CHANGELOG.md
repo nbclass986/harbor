@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.5
+
+- Shorten the required-type setting description in Chinese and English.
+- Clarify the default key (type), values (task, resource, project), and a TT mapping example.
+- Copy-only patch; no functional changes from 0.1.4.
+
 ## 0.1.4
 
 - Add Settings → Required type property to map the internal type field to a user's YAML key, such as TT.

@@ -34,14 +34,12 @@ jobs:
           body: |
             ## Harbor ${{ github.event.release.tag_name || github.ref_name }} — 免费公开试用 / Public trial
 
-            - 新增“设置 → 类型属性（必需）”，可将内部 type 映射为 TT 等 YAML 键。
-            - 修复重启后类型键被重置为 type 的问题。
-            - 新建笔记、目录补类型和笔记类型识别使用映射键；空看板提示同步显示实际键名。
-            - 不再仅凭状态或目录推断缺少类型属性的笔记。修改映射不会批量重命名已有属性。
+            - 精简“类型属性（必需）”的中英文说明。
+            - 明确默认键名 type，以及任务 task、资料 resource、项目 project；不修改即使用默认值。
+            - 保留 TT: task 示例。本次仅调整文案，功能与 0.1.4 相同。
 
-            Configure a required YAML type key (such as TT), preserve it across reloads,
-            and use it consistently for creation, folder stamping and note-kind recognition.
-            Type values remain task, project and resource. No bulk property rename is performed.
+            Shorter type-property guidance: default key type, values task/resource/project,
+            and a TT: task example. Copy-only patch; no functional changes from 0.1.4.
 
             **安装 / Install:** BRAT 仓库地址 `nbclass986/harbor`，或将下面三个文件放入 `.obsidian/plugins/harbor/`。
             Use BRAT with `nbclass986/harbor`, or copy the three attached files into `.obsidian/plugins/harbor/`.
