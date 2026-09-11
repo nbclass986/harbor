@@ -25,6 +25,7 @@ jobs:
       - uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.event.release.tag_name || github.ref_name }}
+          name: Harbor ${{ github.event.release.tag_name || github.ref_name }}
           files: |
             main.js
             manifest.json
@@ -32,19 +33,20 @@ jobs:
           fail_on_unmatched_files: true
           make_latest: true
           body: |
-            ## Harbor ${{ github.event.release.tag_name || github.ref_name }} — 免费公开试用 / Public trial
+            ## Harbor ${{ github.event.release.tag_name || github.ref_name }}
 
-            - 精简“类型属性（必需）”的中英文说明。
-            - 明确默认键名 type，以及任务 task、资料 resource、项目 project；不修改即使用默认值。
-            - 保留 TT: task 示例。本次仅调整文案，功能与 0.1.4 相同。
+            - 类型属性改为四行映射表，type、task、resource、project 均可映射为用户自定义名称，初始值与左侧一致。
+            - 修复设置保存后跳回顶部的问题，保留必要重绘时的滚动位置。
+            - Obsidian 左侧工具栏使用 Harbor「H」快捷图标。
+            - 隐藏 Notion 设置、命令与新建入口，保留原有配置并暂停同步入口。
 
-            Shorter type-property guidance: default key type, values task/resource/project,
-            and a TT: task example. Copy-only patch; no functional changes from 0.1.4.
+            Editable four-row type mappings, stable settings scroll position,
+            a distinctive Harbor ribbon shortcut, and hidden Notion sync entry points.
 
             **安装 / Install:** BRAT 仓库地址 `nbclass986/harbor`，或将下面三个文件放入 `.obsidian/plugins/harbor/`。
             Use BRAT with `nbclass986/harbor`, or copy the three attached files into `.obsidian/plugins/harbor/`.
 
-            Requires Obsidian 1.9.10+. Desktop tested; BRAT install/update acceptance and physical mobile testing remain pending. Notion sync is experimental and disabled by default.
+            Requires Obsidian 1.9.10+. BRAT install/update acceptance and physical mobile testing remain pending. Notion sync is unavailable in this version.
 
-            本次通过构建、分发及定向逻辑检查；未重新验收设置实机界面或完整性能回归。免费试用许可见 LICENSE。
-            Build, distribution and targeted logic checks passed; live settings UI and full performance regression were not revalidated for this patch. See LICENSE for public-trial terms.
+            本次通过构建、分发及定向逻辑检查；未重新验收实机界面或完整性能回归。许可见 LICENSE。
+            Build, distribution and targeted logic checks passed; live UI and full performance regression were not revalidated for this patch. See LICENSE.

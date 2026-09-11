@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.6
+
+- Replace the type setting with a four-row mapping table: type, task, resource, project. All right-hand values are editable and default to their internal names.
+- Preserve custom type values across reloads and use them in note creation and recognition; quote special YAML keys and values safely.
+- Stop store refreshes from rebuilding the active settings form; preserve scroll position for explicit settings redraws.
+- Use a distinctive Harbor H ribbon shortcut to open the workspace.
+- Hide Notion settings, commands and creation controls; suspend sync entry points while preserving saved configuration.
+
+Build, distribution and targeted mocked-DOM/logic checks passed. Live UI acceptance,
+BRAT updates, mobile and full performance regression were not rerun for this patch.
+
 ## 0.1.5
 
 - Shorten the required-type setting description in Chinese and English.

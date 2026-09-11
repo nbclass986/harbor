@@ -111,6 +111,8 @@ This describes a property-and-view workflow, not full feature parity with Notion
 
 **The type property is required.** Under **Harbor Settings → Required type property**, map internal `type` to your actual YAML key. The default is `type`; if you enter `TT`, notes need `TT: task`, `TT: project` or `TT: resource`. Add the property if missing. Harbor note creation and managed-folder type stamping also use this key. Changing the mapping does not bulk-rename existing properties.
 
+The `task`, `resource` and `project` rows also accept custom type values. Defaults match the internal names. For example, mapping `type` to `TT` and `task` to `todo` means task notes use `TT: todo`.
+
 Field mapping connects a **Harbor internal field** to the **actual YAML key in your notes**.
 
 | Harbor internal field | Example YAML key | Property inspector label |
@@ -168,7 +170,7 @@ Colors follow Obsidian's theme, while layout styles stay scoped to Harbor. Defau
 - **Desktop:** Core features, field mapping, themes and narrow containers were checked on Windows / Obsidian 1.13.7. Native single-card, multi-card and calendar drops were confirmed by the user on their machine.
 - **Mobile:** Physical mobile testing is pending. A narrow-container test is not a phone test.
 - **BRAT:** Installation assets are available in Releases; client installation and automatic updates still need separate validation.
-- **Notion:** Sync is experimental and disabled by default. Enabling and running it exchanges selected note content with the Notion API. Live sync was not tested in this round.
+- **Notion:** Sync is not available yet; entry points are hidden and existing configuration is preserved.
 
 ## Feedback and license
 
