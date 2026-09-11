@@ -109,6 +109,8 @@ This describes a property-and-view workflow, not full feature parity with Notion
 
 ### Keep your own YAML names
 
+**The type property is required.** Under **Harbor Settings → Required type property**, map internal `type` to your actual YAML key. The default is `type`; if you enter `TT`, notes need `TT: task`, `TT: project` or `TT: resource`. Add the property if missing. Harbor note creation and managed-folder type stamping also use this key. Changing the mapping does not bulk-rename existing properties.
+
 Field mapping connects a **Harbor internal field** to the **actual YAML key in your notes**.
 
 | Harbor internal field | Example YAML key | Property inspector label |

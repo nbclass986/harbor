@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.4
+
+- Add Settings → Required type property to map the internal type field to a user's YAML key, such as TT.
+- Preserve the configured type key when loading settings instead of resetting it to type.
+- Use the mapped key for note creation, folder type stamping and note-kind recognition.
+- Do not infer note kind from status alone or a folder path when the type property is missing.
+- Update empty-board guidance to name the configured key and the correct settings section.
+
+Type values remain task, project and resource. Existing notes need the mapped key
+and a valid value; changing the mapping does not rename their properties. Existing
+managed-folder rules can still fill or update type values using the mapped key.
+Validated through production build and targeted logic tests; live settings UI,
+BRAT updates and a full performance regression were not revalidated for this patch.
+
 ## 0.1.3
 
 - Compact project-window menu immediately before Close; remove the dedicated mode-switch rail.

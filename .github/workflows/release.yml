@@ -34,18 +34,19 @@ jobs:
           body: |
             ## Harbor ${{ github.event.release.tag_name || github.ref_name }} — 免费公开试用 / Public trial
 
-            - 项目窗口菜单移至关闭按钮前，移除占用空间的左侧栏。
-            - 项目顶栏使用 24 种低饱和配色，同时打开时避免重色。
-            - 项目浮窗可折叠为短标题条，展开恢复尺寸，不阻挡其他页面操作。
-            - 中英文 README 新增项目停靠 GIF 步骤演示。
+            - 新增“设置 → 类型属性（必需）”，可将内部 type 映射为 TT 等 YAML 键。
+            - 修复重启后类型键被重置为 type 的问题。
+            - 新建笔记、目录补类型和笔记类型识别使用映射键；空看板提示同步显示实际键名。
+            - 不再仅凭状态或目录推断缺少类型属性的笔记。修改映射不会批量重命名已有属性。
 
-            Compact window menu, distinct muted project colors, title-sized collapsed bars,
-            restored expanded dimensions, and a new docking walkthrough GIF.
+            Configure a required YAML type key (such as TT), preserve it across reloads,
+            and use it consistently for creation, folder stamping and note-kind recognition.
+            Type values remain task, project and resource. No bulk property rename is performed.
 
             **安装 / Install:** BRAT 仓库地址 `nbclass986/harbor`，或将下面三个文件放入 `.obsidian/plugins/harbor/`。
             Use BRAT with `nbclass986/harbor`, or copy the three attached files into `.obsidian/plugins/harbor/`.
 
             Requires Obsidian 1.9.10+. Desktop tested; BRAT install/update acceptance and physical mobile testing remain pending. Notion sync is experimental and disabled by default.
 
-            本次通过构建、分发及定向逻辑检查；未重新执行完整性能回归。免费试用许可见 LICENSE。
-            Build, distribution and targeted logic checks passed; no full performance regression rerun. See LICENSE for public-trial terms.
+            本次通过构建、分发及定向逻辑检查；未重新验收设置实机界面或完整性能回归。免费试用许可见 LICENSE。
+            Build, distribution and targeted logic checks passed; live settings UI and full performance regression were not revalidated for this patch. See LICENSE for public-trial terms.
