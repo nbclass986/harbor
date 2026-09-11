@@ -18,6 +18,7 @@ From capturing an idea to moving a project forward, work inside your existing va
 
 - **Turn ideas into next actions.** Capture in Inbox, then move tasks through Open, Doing and Done.
 - **Organize work around projects.** Link tasks and resources to a project and review them together.
+- **Park a project without closing it.** Collapse its floating window to a title bar, keep working in other notes, and expand it when you are ready to return.
 - **Choose the right view.** Track progress on a board, plan dates on a calendar, inspect properties in a table or browse cards in a gallery.
 - **Keep your own property names.** Map existing YAML keys to Harbor fields without renaming everything for the plugin.
 - **Build your workspace.** Filter, sort, choose visible properties and save useful views. Open Harbor in a tab, sidebar or floating window.
@@ -39,6 +40,12 @@ Switch between board, gallery, table and calendar to bring the information you n
 Capture first, decide what comes next. These frames show the before-and-after states, not native pointer input.
 
 ![Inbox to Open state-change step demonstration](media/drag-steps.gif)
+
+### Park a project without interrupting your work
+
+Keep a project nearby while researching or writing. Collapse its floating detail window to a title bar and leave it to one side. You can still click, edit and switch between other pages; expand the project whenever you want to pick up where you left off.
+
+It is a non-modal workspace you can put aside and return to, not a dialog that blocks the rest of Obsidian.
 
 ### Projects, properties and creation
 
