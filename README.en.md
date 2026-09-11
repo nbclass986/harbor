@@ -49,7 +49,7 @@ It is a non-modal workspace you can put aside and return to, not a dialog that b
 
 ![Project expanded, collapsed to a title bar, and kept parked while switching to Gallery](media/docking-steps.gif)
 
-Actual UI preview of the local update with fictional data. This GIF uses key frames, not a real-time recording: open a project, collapse it, then switch the workspace to Gallery while keeping the project parked. The updated title-bar styling is not yet in a published Release.
+Actual UI with fictional data. This GIF uses key frames, not a real-time recording: open a project, collapse it, then switch the workspace to Gallery while keeping the project parked.
 
 ### Projects, properties and creation
 

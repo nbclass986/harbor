@@ -1743,7 +1743,7 @@ button.nbclass-prop-dropdown-trigger {
 .nbclass-chip { max-width: 100%; overflow: hidden; text-overflow: ellipsis; font-size: 11px; line-height: 1.5; }
 .nbclass-col.is-drop-target { outline-offset: -2px; background: var(--background-modifier-hover); }
 .nbclass-card:focus-visible { outline: 2px solid var(--interactive-accent); outline-offset: 2px; }
-.nbclass-project-float { container-type: inline-size; container-name: harbor-project; }
+.nbclass-project-float, .nbclass-project-leaf { container-type: inline-size; container-name: harbor-project; }
 @container harbor-project (max-width: 640px) {
   .nbclass-project-float-content { flex-direction: column !important; overflow: auto !important; }
   .nbclass-project-yaml { width: 100% !important; min-width: 0 !important; flex: 0 0 auto !important; max-height: 220px; border-right: 0 !important; }
@@ -2007,4 +2007,34 @@ button.nbclass-prop-dropdown-trigger {
   .nbclass-shell .nbclass-body { padding: 8px; }
   .nbclass-shell .nbclass-database-chrome-row { padding: 8px !important; gap: 8px !important; }
   .nbclass-shell .nbclass-create-page .nbclass-form { padding: 8px 12px; }
+}
+
+/* Project chrome: colored navigation; theme-native working content. */
+.nbclass-project-main { display: flex; flex-direction: column; flex: 1; min-width: 0; min-height: 0; }
+.nbclass-project-mode-menu { margin: 0; }
+.nbclass-project-float-bar button:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.nbclass-project-float .nbclass-project-float-bar,
+.nbclass-project-leaf .nbclass-project-float-bar {
+  background: var(--harbor-project-color) !important; color: #fff !important;
+  border-top: 0; border-bottom: 1px solid rgb(255 255 255 / 12%); box-sizing: border-box;
+}
+.nbclass-project-float-title { color: #fff !important; flex: 1 1 auto !important; }
+.nbclass-project-float .nbclass-project-float-bar button,
+.nbclass-project-leaf .nbclass-project-float-bar button {
+  background: rgb(255 255 255 / 9%) !important; color: #fff !important;
+  border-color: rgb(255 255 255 / 20%) !important; box-shadow: none;
+}
+.nbclass-project-float .nbclass-project-float-bar button:hover,
+.nbclass-project-leaf .nbclass-project-float-bar button:hover { background: rgb(255 255 255 / 19%) !important; }
+.nbclass-project-float.is-project-collapsed {
+  container-type: normal; min-width: 0 !important; width: max-content;
+  max-width: 95vw; box-sizing: content-box;
+}
+.nbclass-project-float.is-project-collapsed .nbclass-project-float-bar { background: var(--harbor-project-color) !important; border-top: 0; }
+.nbclass-project-float.is-project-collapsed .nbclass-project-float-title { color: #fff !important; }
+.nbclass-project-float.is-project-collapsed .nbclass-project-main { flex: 0 1 auto; }
+.nbclass-project-float.is-project-collapsed .nbclass-project-float-title { flex: 0 1 auto !important; }
+@container harbor-project (max-width: 640px) {
+  .nbclass-project-float-bar { flex-wrap: wrap; height: auto !important; padding: 8px !important; gap: 6px !important; }
+  .nbclass-project-float-title { flex-basis: 100% !important; }
 }

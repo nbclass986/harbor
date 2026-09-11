@@ -20,8 +20,8 @@ Screenshots and media are covered by the repository's Public Trial License.
 
 ## Project docking preview
 
-`docking-steps.gif` shows the local updated project chrome, not yet published in a
-Release. Three real Obsidian screenshots use isolated fictional in-memory data:
+`docking-steps.gif` shows the updated project chrome released in 0.1.3.
+Three real Obsidian screenshots use isolated fictional in-memory data:
 expanded project, collapsed project, and Gallery with the same project still
 collapsed. Gallery was selected through the workspace layout menu. Frames are
 staged/assembled, not a real-time recording or a performance measurement. No

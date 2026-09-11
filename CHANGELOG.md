@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.3
+
+- Compact project-window menu immediately before Close; remove the dedicated mode-switch rail.
+- Restore full-color project title bars with 24 subdued colors and collision avoidance for concurrently open projects.
+- Collapse floating project details to a title-sized bar; restore the previous expanded dimensions.
+- Keep other workspace views interactive while a project is parked.
+- Add a fictional-data docking walkthrough GIF to both READMEs.
+
+Type checking, production build, distribution checks and targeted menu/collapse/color
+logic checks passed. The docking walkthrough was checked in real Obsidian.
+BRAT installation/automatic updates, physical mobile testing and live Notion sync
+remain unverified; this update does not claim a full performance regression run.
+
 ## 0.1.2
 
 Public trial. Local desktop checks completed; BRAT install/update acceptance pending.
