@@ -46,6 +46,3 @@ jobs:
             Use BRAT with `nbclass986/harbor`, or copy the three attached files into `.obsidian/plugins/harbor/`.
 
             Requires Obsidian 1.9.10+. BRAT install/update acceptance and physical mobile testing remain pending. Notion sync is unavailable in this version.
-
-            本次通过构建、分发及定向逻辑检查；未重新验收实机界面或完整性能回归。许可见 LICENSE。
-            Build, distribution and targeted logic checks passed; live UI and full performance regression were not revalidated for this patch. See LICENSE.
