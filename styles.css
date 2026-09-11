@@ -1775,3 +1775,236 @@ button.nbclass-prop-dropdown-trigger {
 @media (prefers-reduced-motion: reduce) {
   .nbclass-card,.nbclass-rail-item { transition: none !important; }
 }
+
+/* Harbor workbench surfaces. Keep theme-derived tokens local to plugin roots. */
+.nbclass-nav-toggle-content:has(.nbclass-home-database) {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: auto;
+}
+.nbclass-nav-toggle-content > .nbclass-muted { flex: 0 0 auto; margin: 6px 0; }
+.nbclass-home-database { flex: 1 0 240px; min-height: 240px; width: 100%; }
+.nbclass-home-database .nbclass-kanban-chrome-host { padding: 4px 8px 0 !important; }
+.nbclass-shell,
+.nbclass-property-float-win,
+.nbclass-create-modal,
+.nbclass-project-float,
+.nbclass-preset-float {
+  --harbor-canvas: var(--background-secondary);
+  --harbor-surface: var(--background-primary);
+  --harbor-line: var(--background-modifier-border);
+  --harbor-accent-soft: var(--background-modifier-hover);
+}
+@supports (background: color-mix(in srgb, white, black)) {
+  .nbclass-shell,
+  .nbclass-property-float-win,
+  .nbclass-create-modal,
+  .nbclass-project-float,
+  .nbclass-preset-float {
+    --harbor-canvas: color-mix(in srgb, var(--background-primary) 94%, var(--text-normal));
+    --harbor-line: color-mix(in srgb, var(--background-primary) 84%, var(--text-normal));
+    --harbor-accent-soft: color-mix(in srgb, var(--background-primary) 89%, var(--interactive-accent));
+  }
+}
+.nbclass-shell .nbclass-main,
+.nbclass-shell .nbclass-body {
+  background: var(--harbor-canvas);
+}
+.nbclass-shell .nbclass-body { padding: 16px; }
+.nbclass-shell .nbclass-rail {
+  background: var(--harbor-surface) !important;
+  border-right-color: var(--harbor-line);
+  gap: 4px;
+}
+.nbclass-shell .nbclass-rail-item { border-radius: 8px; min-height: 52px; }
+.nbclass-shell .nbclass-rail-item[aria-pressed="true"] {
+  background: var(--harbor-accent-soft) !important;
+  box-shadow: inset 3px 0 0 var(--interactive-accent);
+  color: var(--text-normal);
+}
+.nbclass-shell .nbclass-database-chrome-row {
+  background: var(--harbor-surface) !important;
+  border: 1px solid var(--harbor-line);
+  border-radius: 8px !important;
+  gap: 10px !important;
+  padding: 12px !important;
+  box-shadow: none;
+}
+.nbclass-shell .nbclass-database-chrome-tabs { min-width: 0; }
+.nbclass-shell .nbclass-database-chrome-actions button {
+  min-height: 30px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+.nbclass-shell .nbclass-overview-count {
+  font-size: 12px;
+  font-style: normal;
+  color: var(--text-muted);
+}
+.nbclass-shell .nbclass-board { gap: 12px; }
+.nbclass-shell .nbclass-col {
+  background: var(--harbor-canvas);
+  border: 1px solid var(--harbor-line);
+  border-radius: 10px;
+}
+.nbclass-shell .nbclass-col-header { padding: 10px; min-height: 42px; }
+.nbclass-shell .nbclass-col-title { font-size: 12px; font-weight: 650; }
+.nbclass-shell .nbclass-col-body { padding: 0 8px 8px; gap: 8px; }
+.nbclass-shell .nbclass-card {
+  background: var(--harbor-surface);
+  border-color: var(--harbor-line);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 4%);
+}
+.nbclass-shell .nbclass-card:hover {
+  border-color: var(--interactive-accent);
+  box-shadow: 0 2px 6px rgb(0 0 0 / 7%);
+}
+.nbclass-shell .nbclass-table-wrap {
+  background: var(--harbor-canvas);
+  border: 1px solid var(--harbor-line);
+  border-radius: 8px;
+  padding: 0 0 8px;
+}
+.nbclass-shell .nbclass-table { background: var(--harbor-surface); }
+.nbclass-shell .nbclass-table th {
+  background: var(--harbor-canvas);
+  color: var(--text-normal);
+  border-bottom: 1px solid var(--harbor-line);
+  font-size: 12px;
+  padding: 10px 12px;
+}
+.nbclass-shell .nbclass-table td { padding: 10px 12px; }
+.nbclass-shell .nbclass-table tbody tr:hover { background: var(--background-modifier-hover); }
+
+/* The floating inspector uses one stable label/value grid, even for mapped keys. */
+.nbclass-property-float-win {
+  background: var(--harbor-surface) !important;
+  border-color: var(--harbor-line) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 12%) !important;
+}
+.nbclass-property-float-win .nbclass-property-float-title-bar {
+  min-height: 44px;
+  padding: 10px 14px !important;
+  background: var(--harbor-canvas) !important;
+  border-bottom: 1px solid var(--harbor-line) !important;
+}
+.nbclass-property-float-win .nbclass-property-band { padding: 6px 14px 10px !important; }
+.nbclass-property-float-win .nbclass-property-rows { gap: 0; }
+.nbclass-property-float-win .nbclass-prop-group-row { display: contents; }
+.nbclass-property-float-win :is(.nbclass-prop-row,.nbclass-prop-inline-field) {
+  display: grid;
+  grid-template-columns: minmax(0, 38%) minmax(0, 1fr);
+  gap: 12px;
+  padding: 9px 0;
+  min-height: 46px;
+  align-items: center;
+  border-bottom: 1px solid var(--harbor-line);
+}
+.nbclass-property-float-win :is(.nbclass-prop-row-label,.nbclass-prop-inline-label) {
+  color: var(--text-normal);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.nbclass-property-float-win :is(input,select,button) {
+  max-width: 100%;
+  box-sizing: border-box;
+  font-size: 12px;
+  box-shadow: none;
+  border-radius: 6px;
+}
+.nbclass-property-float-win :is(.nbclass-prop-date-input,.nbclass-prop-inline-input) {
+  width: 100%;
+  min-width: 0;
+  min-height: 30px;
+  background: var(--harbor-canvas);
+  border: 1px solid var(--harbor-line);
+  color: var(--text-normal);
+}
+.nbclass-property-float-win .nbclass-prop-pill-add {
+  background: transparent;
+  border: 1px solid var(--harbor-line);
+  color: var(--text-muted);
+  min-height: 28px;
+}
+.nbclass-property-float-win .nbclass-prop-pill-add:hover {
+  background: var(--harbor-accent-soft);
+  color: var(--text-normal);
+}
+.nbclass-shell .nbclass-gallery { padding: 0; gap: 12px; }
+.nbclass-shell .nbclass-cal {
+  background: var(--harbor-surface);
+  border: 1px solid var(--harbor-line);
+  border-radius: 8px;
+}
+.nbclass-shell .nbclass-cal-nav { padding: 10px 12px; }
+.nbclass-shell .nbclass-cal-dow {
+  background: var(--harbor-canvas);
+  color: var(--text-normal);
+  padding: 8px 4px;
+}
+.nbclass-shell .nbclass-cal-day { background: var(--harbor-surface); }
+.nbclass-shell .nbclass-cal-day.is-pad { background: var(--harbor-canvas); }
+.nbclass-shell .nbclass-cal-day.is-today { box-shadow: inset 0 3px 0 var(--interactive-accent); }
+.nbclass-shell .nbclass-cal-day.is-selected { background: var(--harbor-accent-soft); }
+.nbclass-shell .nbclass-col.is-drop-target,
+.nbclass-shell .nbclass-cal-day.is-drop-target { background: var(--harbor-accent-soft); }
+.nbclass-shell .nbclass-timeline { padding: 0; }
+.nbclass-shell .nbclass-timeline-section {
+  background: var(--harbor-surface);
+  border: 1px solid var(--harbor-line);
+  border-radius: 8px;
+  padding: 12px;
+}
+.nbclass-shell .nbclass-timeline-header { padding: 0 0 10px; margin-bottom: 4px; }
+.nbclass-shell .nbclass-timeline-row { margin-left: 0; padding: 10px 6px; gap: 12px; }
+.nbclass-shell .nbclass-timeline-title { font-size: 13px; line-height: 1.5; }
+.nbclass-shell .nbclass-create-page { background: var(--harbor-canvas); }
+.nbclass-shell .nbclass-create-page .nbclass-form {
+  padding: 12px 20px;
+  border: 1px solid var(--harbor-line);
+  border-radius: 10px;
+  background: var(--harbor-surface);
+  box-sizing: border-box;
+}
+.nbclass-create-modal {
+  background: var(--harbor-surface);
+  border: 1px solid var(--harbor-line);
+  border-radius: 12px;
+}
+.nbclass-create-modal .modal-title { font-size: 20px; font-weight: 650; }
+.nbclass-create-modal :is(input:not([type="checkbox"]),select,textarea),
+.nbclass-shell .nbclass-create-page :is(input:not([type="checkbox"]),select,textarea) {
+  background: var(--harbor-canvas);
+  border: 1px solid var(--harbor-line);
+  border-radius: 6px;
+  box-shadow: none;
+  color: var(--text-normal);
+}
+.nbclass-project-float,
+.nbclass-preset-float {
+  background: var(--harbor-canvas);
+  border-radius: 10px !important;
+  box-shadow: 0 8px 28px rgb(0 0 0 / 14%) !important;
+}
+.nbclass-project-float .nbclass-project-yaml {
+  background: var(--harbor-surface) !important;
+  border-right: 1px solid var(--harbor-line);
+}
+.nbclass-project-float .nbclass-project-float-bar,
+.nbclass-preset-float .nbclass-preset-float-bar {
+  background: var(--harbor-surface) !important;
+  border-bottom-color: var(--harbor-line);
+  min-height: 44px;
+}
+@container harbor (max-width: 600px) {
+  .nbclass-shell .nbclass-body { padding: 8px; }
+  .nbclass-shell .nbclass-database-chrome-row { padding: 8px !important; gap: 8px !important; }
+  .nbclass-shell .nbclass-create-page .nbclass-form { padding: 8px 12px; }
+}

@@ -4,6 +4,10 @@
 
 Local release candidate; not yet published.
 
+- Add independent Home-section toolbars with persisted search, filters, sorting, property visibility and layouts.
+- Display mapped user YAML keys verbatim in the property inspector; verify eight non-default field names.
+- Refine theme-derived surfaces, borders, property forms and floating windows without global note CSS overrides.
+
 - Free public trial through BRAT; development source remains private.
 - Updated board and calendar UI, including year view, table and timeline layouts.
 - Scattered layout creates a project folder with task/resource subfolders.

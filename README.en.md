@@ -20,11 +20,17 @@ Harbor is available as a free public trial through GitHub and BRAT. Development 
 
 ![Inbox to Open state-change steps, not a native drag recording](media/drag-steps.gif)
 
-The state-change GIF uses actual application screenshots staged through the plugin write path; the original note status was restored. It is not a native pointer recording.
+Media refreshed on 2026-09-11 uses production components inside real Obsidian with isolated fictional in-memory data. The state-change GIF shows staged Inbox/Open states, not native pointer input or evidence of successful YAML writes.
 
 All notes shown are fictional. The GIF uses key frames and does not demonstrate speed. More: [Gallery](media/gallery.png) · [Calendar](media/calendar.png) · [Table](media/table.png) · [Dark board](media/board-dark.png) · [Project details](media/project.png) · [Create dialog](media/create.png) · [Properties](media/properties.png).
 
 ### Candidate status
+
+- Coming, Personal, Fleeting and Overdue on Home now have search, filter, sort, property visibility and layout controls. Each section persists its own settings without changing normal task views or its underlying task scope. All 29 targeted logic checks passed.
+- Latest real-renderer Home regression: default light, default dark and Blue Topaz × 400/720/1200 px × four sections; all 36 toolbar boundary, focus and hit-test checks passed. These are container-width checks, not mobile acceptance.
+- The property inspector displays the user's mapped YAML key verbatim: mapping internal `due` to `deadline` reads, writes and labels `deadline`, with no separate display alias. All 40 mapping checks passed, including eight differently named fields.
+- Latest UI retest (2026-09-10): search/filter/maximum view-switch P95 was **54.6/34.6/59.3 ms at 1,000 tasks**, and **61.1/33.7/75.8 ms at 5,000**. Twenty samples each, synthetic in-memory data, real rendering and two animation frames; excludes disk indexing and process cold boot. Earlier figures below are historical baselines.
+- Colors follow Obsidian theme variables; layout and spacing stay scoped to Harbor. Tested themes do not imply universal third-party theme compatibility; custom CSS can still conflict.
 
 - Follow-up dialog checks passed 33/33: three themes, task/project/resource create dialogs at 400/720/1080 px, and project details at 720/1080 px. Fixed missing visible keyboard focus on several buttons and project controls. These are component-width checks, not physical mobile or every application viewport.
 
