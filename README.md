@@ -10,21 +10,39 @@ Harbor 是一个 [Obsidian](https://obsidian.md) 插件：同一批 Markdown 笔
 
 目前通过 GitHub + BRAT 免费公开试用，开发源码暂不公开。欢迎在 [Issues](https://github.com/nbclass986/harbor/issues) 反馈问题。
 
-> 当前仓库文件为 **0.1.2 桌面候选版**，尚未创建对应 Release。BRAT 安装和自动更新仍以 Releases 为准；本地候选包加载成功不代表 BRAT 已验收。
+> **0.1.2 免费试用版**：[下载与发布说明](https://github.com/nbclass986/harbor/releases/tag/0.1.2)。已完成本地桌面验证；实际 BRAT 安装和自动更新仍待单独验收。
 
 ## 工作台预览
 
 ![Harbor 看板，Blue Topaz 浅色](media/board.png)
 
+### 一组笔记，四种视图
+
+看板推进状态，画廊浏览卡片，表格集中查看属性，日历安排日期。
+
 ![视图切换步骤演示，非实时录屏](media/view-steps.gif)
 
+### 从收集到行动
+
+将想法从 Inbox 整理到 Open。下图演示变化前后两种状态。
+
 ![Inbox 到 Open 状态变更步骤演示，非鼠标拖放录屏](media/drag-steps.gif)
+
+### 项目、属性和新建入口
+
+在项目中查看关联任务；属性面板显示你自己的 YAML 键名，新建弹窗填写任务信息。
+
+![项目详情、原始 YAML 属性名和新建弹窗步骤演示](media/detail-steps.gif)
+
+### 深色主题
+
+![Harbor 默认深色主题看板](media/board-dark.png)
 
 素材于 2026-09-11 更新，使用真实 Obsidian 中的生产组件与隔离的虚构内存数据。状态变更 GIF 展示预设的 Inbox／Open 两种状态，不是原生鼠标拖放录屏，也不用于证明 YAML 写入成功。
 
 以上均为虚构演示笔记。GIF 是关键帧步骤演示，不用于证明速度。更多画面：[画廊](media/gallery.png) · [日历](media/calendar.png) · [表格](media/table.png) · [深色看板](media/board-dark.png) · [项目详情](media/project.png) · [新建弹窗](media/create.png) · [属性条](media/properties.png)。
 
-### 0.1.2 候选版状态
+### 0.1.2 桌面验证记录
 
 - 主页 Coming／Personal／Fleeting／Overdue 四区均提供搜索、筛选、排序、属性显示及布局工具栏，设置分别保存；保留每区原有任务范围，不影响普通任务视图。29 项针对性逻辑测试通过。
 - 最新主页真实渲染回归：默认浅色、默认深色、Blue Topaz × 400／720／1200 px × 四区，36/36 工具栏边界、焦点和遮挡检查通过；属于容器宽度测试，不是手机验收。

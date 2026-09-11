@@ -2,7 +2,7 @@
 
 ## 0.1.2
 
-Local release candidate; not yet published.
+Public trial. Local desktop checks completed; BRAT install/update acceptance pending.
 
 - Add independent Home-section toolbars with persisted search, filters, sorting, property visibility and layouts.
 - Display mapped user YAML keys verbatim in the property inspector; verify eight non-default field names.
@@ -28,7 +28,7 @@ Local desktop candidate checks are documented in the README. The user verified
 native single/multi-card and calendar drops. All 54 theme/size focus, hit-testing
 and scroll checks passed after the narrow-form fix. One measured process-cold
 startup reached first usable at 1.891 s (OS file cache not flushed).
-No 0.1.2 Release has been created; BRAT install/update acceptance is pending.
+BRAT install/update acceptance remains separate from local desktop checks.
 
 ## 0.1.1 — 2026-09-01
 

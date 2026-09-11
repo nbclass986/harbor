@@ -10,21 +10,39 @@ No Buttons or QuickAdd dependency.
 
 Harbor is available as a free public trial through GitHub and BRAT. Development source code is not currently published. Report problems through [Issues](https://github.com/nbclass986/harbor/issues).
 
-> The files on this branch are the **0.1.2 desktop candidate**, not a published Release. BRAT installation and updates follow Releases. A successful local load is not BRAT acceptance.
+> **0.1.2 public trial**: [Downloads and release notes](https://github.com/nbclass986/harbor/releases/tag/0.1.2). Locally tested on desktop; actual BRAT installation and automatic updates still require separate acceptance.
 
 ## Workbench preview
 
 ![Harbor board in Blue Topaz light](media/board.png)
 
+### One collection, four views
+
+Move work forward on a board, browse a gallery, inspect a table, or plan dates on a calendar.
+
 ![View-switching step demonstration, not a real-time recording](media/view-steps.gif)
 
+### From capture to action
+
+Organize an idea from Inbox into Open. These frames show the two states.
+
 ![Inbox to Open state-change steps, not a native drag recording](media/drag-steps.gif)
+
+### Projects, properties and creation
+
+See related tasks inside a project, use your own YAML field names, and create a task from the dialog.
+
+![Project details, mapped YAML properties and create dialog step demonstration](media/detail-steps.gif)
+
+### Dark theme
+
+![Harbor board in the default dark theme](media/board-dark.png)
 
 Media refreshed on 2026-09-11 uses production components inside real Obsidian with isolated fictional in-memory data. The state-change GIF shows staged Inbox/Open states, not native pointer input or evidence of successful YAML writes.
 
 All notes shown are fictional. The GIF uses key frames and does not demonstrate speed. More: [Gallery](media/gallery.png) · [Calendar](media/calendar.png) · [Table](media/table.png) · [Dark board](media/board-dark.png) · [Project details](media/project.png) · [Create dialog](media/create.png) · [Properties](media/properties.png).
 
-### Candidate status
+### 0.1.2 desktop validation record
 
 - Coming, Personal, Fleeting and Overdue on Home now have search, filter, sort, property visibility and layout controls. Each section persists its own settings without changing normal task views or its underlying task scope. All 29 targeted logic checks passed.
 - Latest real-renderer Home regression: default light, default dark and Blue Topaz × 400/720/1200 px × four sections; all 36 toolbar boundary, focus and hit-test checks passed. These are container-width checks, not mobile acceptance.

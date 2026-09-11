@@ -29,6 +29,18 @@ jobs:
             main.js
             manifest.json
             styles.css
-            LICENSE
           fail_on_unmatched_files: true
           make_latest: true
+          body: |
+            ## Harbor 0.1.2 — 免费公开试用 / Public trial
+
+            主页四分区独立工具栏、主题适配界面、用户 YAML 属性映射，以及性能与生命周期优化。
+            Independent Home toolbars, theme-aware UI, mapped YAML fields and rendering/lifecycle improvements.
+
+            **安装 / Install:** BRAT 仓库地址 `nbclass986/harbor`，或将下面三个文件放入 `.obsidian/plugins/harbor/`。
+            Use BRAT with `nbclass986/harbor`, or copy the three attached files into `.obsidian/plugins/harbor/`.
+
+            Requires Obsidian 1.9.10+. Desktop tested; BRAT install/update acceptance and physical mobile testing remain pending. Notion sync is experimental and disabled by default.
+
+            仅分发编译后的插件文件；开发源码不公开。免费试用许可见仓库 LICENSE。
+            Compiled distribution only; development source remains private. See the repository LICENSE for public-trial terms.
