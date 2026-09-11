@@ -86,7 +86,17 @@ Harbor uses three note types: **Project** for an outcome, **Task** for a next ac
 
 Home provides Coming, Personal, Fleeting and Overdue sections. Each keeps its own search, filters, sorting, visible properties and layout. These controls work within the section's existing task scope and do not change other views.
 
-## Keep your own YAML names
+## Notion-style properties, local-first notes
+
+Organize local notes with a property-based workflow familiar to Notion database users. Customize property names and values such as statuses, priorities, people and tags, then combine filters, sorting and multiple views to build your own workspace. Your data stays in Obsidian's Markdown and YAML files.
+
+![Custom property inspector with workflow_state, importance, deadline and Chinese people and tag fields](media/properties.png)
+
+The example uses custom keys such as `workflow_state`, `importance`, `deadline`, `负责人` (assignee) and `分类标签` (tags), with their values on the right. Configure names and values to fit your workflow rather than copying the demo.
+
+This describes a property-and-view workflow, not full feature parity with Notion databases.
+
+### Keep your own YAML names
 
 Field mapping connects a **Harbor internal field** to the **actual YAML key in your notes**.
 
