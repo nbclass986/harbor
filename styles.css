@@ -147,8 +147,10 @@ body {
 }
 
 .nbclass-col {
-  flex: 0 0 240px;
-  max-width: 280px;
+  flex: 0 0 auto;
+  width: 240px;
+  min-width: 180px;
+  max-width: none;
   background: var(--background-secondary);
   border: 1px solid var(--background-modifier-border);
   border-radius: 8px;
@@ -163,6 +165,7 @@ body {
 
 .nbclass-col.is-collapsed {
   flex-basis: 44px;
+  min-width: 44px;
   max-width: 44px;
 }
 
@@ -1319,10 +1322,15 @@ button.nbclass-prop-dropdown-trigger {
   position: absolute;
   top: 0;
   right: 0;
-  width: 6px;
+  width: 8px;
   height: 100%;
   cursor: col-resize;
+  z-index: 2;
+  touch-action: none;
+  user-select: none;
 }
+.nbclass-col-resize:hover, .nbclass-col-resize:focus-visible { background: var(--interactive-accent); opacity: .55; }
+.nbclass-col.is-collapsed .nbclass-col-resize { display: none; }
 
 .nbclass-create-grid {
   display: grid;

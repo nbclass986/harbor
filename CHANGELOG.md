@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.7
+
+- Scan existing vault values using current YAML mappings to supplement status, priority, people and tag options. Merge and deduplicate without editing notes or replacing existing options.
+- Combine assignee and participant values into the people list; report notes whose metadata is not indexed yet.
+- Fix draggable board column widths, including project details, and remove the previous maximum-width restriction.
+- Scope task and project boards to their own note type and remove the redundant data-source control.
+
+Build, distribution and targeted logic checks passed. Live UI, BRAT updates,
+mobile and full performance regression were not rerun for this patch.
+
 ## 0.1.6
 
 - Replace the type setting with a four-row mapping table: type, task, resource, project. All right-hand values are editable and default to their internal names.
