@@ -2,144 +2,153 @@
 
 # Harbor
 
-Harbor is an [Obsidian](https://obsidian.md) plugin. The same Markdown notes can be seen as a board, gallery, calendar, or table. Drag a card or change a date; the YAML on the note is updated.
+**Turn notes into action. Give your projects a place to land.**
 
-Notes use **PRT**. The workflow follows **GTD** and **PARA**. UI language: auto / English / 简体中文. Notion sync is still in development.
+Harbor is a local-first workspace for [Obsidian](https://obsidian.md) that brings tasks, projects and reference material together. View the same Markdown notes as a board, gallery, calendar, table or timeline. Changes to properties such as status and dates are written back to the notes' YAML.
 
-No Buttons or QuickAdd dependency.
+From capturing an idea to moving a project forward, work inside your existing vault instead of maintaining a separate task database.
 
-Harbor is available as a free public trial through GitHub and BRAT. Development source code is not currently published. Report problems through [Issues](https://github.com/nbclass986/harbor/issues).
+[Download latest](https://github.com/nbclass986/harbor/releases/latest) · [Installation](#installation) · [Report an issue](https://github.com/nbclass986/harbor/issues) · [Changelog](CHANGELOG.md)
 
-> **0.1.2 public trial**: [Downloads and release notes](https://github.com/nbclass986/harbor/releases/tag/0.1.2). Locally tested on desktop; actual BRAT installation and automatic updates still require separate acceptance.
+> Currently a free public trial; development source is not published. Requires Obsidian **1.9.10+**. Tested locally on desktop; physical mobile testing and BRAT installation/automatic-update acceptance remain pending.
 
-## Workbench preview
+![Harbor workspace in a light theme](media/board.png)
 
-![Harbor board in Blue Topaz light](media/board.png)
+## What you can do
 
-### One collection, four views
+- **Turn ideas into next actions.** Capture in Inbox, then move tasks through Open, Doing and Done.
+- **Organize work around projects.** Link tasks and resources to a project and review them together.
+- **Choose the right view.** Track progress on a board, plan dates on a calendar, inspect properties in a table or browse cards in a gallery.
+- **Keep your own property names.** Map existing YAML keys to Harbor fields without renaming everything for the plugin.
+- **Build your workspace.** Filter, sort, choose visible properties and save useful views. Open Harbor in a tab, sidebar or floating window.
 
-Move work forward on a board, browse a gallery, inspect a table, or plan dates on a calendar.
+Supports English, Simplified Chinese and automatic language selection. No Buttons or QuickAdd dependency.
 
-![View-switching step demonstration, not a real-time recording](media/view-steps.gif)
+## See it in action
 
-### From capture to action
+These images show real Harbor components inside Obsidian with fictional data. **GIFs are key-frame step demonstrations, not real-time recordings or evidence of operation speed or successful YAML writes.** [Media notes](media/README.md)
 
-Organize an idea from Inbox into Open. These frames show the two states.
+### One collection, different perspectives
 
-![Inbox to Open state-change steps, not a native drag recording](media/drag-steps.gif)
+Switch between board, gallery, table and calendar to bring the information you need into focus.
+
+![Board, gallery, table and calendar step demonstration](media/view-steps.gif)
+
+### From Inbox to Open
+
+Capture first, decide what comes next. These frames show the before-and-after states, not native pointer input.
+
+![Inbox to Open state-change step demonstration](media/drag-steps.gif)
 
 ### Projects, properties and creation
 
-See related tasks inside a project, use your own YAML field names, and create a task from the dialog.
+Review related tasks, edit your own YAML properties and add the next action.
 
-![Project details, mapped YAML properties and create dialog step demonstration](media/detail-steps.gif)
+![Project details, mapped properties and create dialog step demonstration](media/detail-steps.gif)
 
-### Dark theme
+<details>
+<summary>See the dark theme and more screenshots</summary>
 
-![Harbor board in the default dark theme](media/board-dark.png)
+![Harbor workspace in the default dark theme](media/board-dark.png)
 
-Media refreshed on 2026-09-11 uses production components inside real Obsidian with isolated fictional in-memory data. The state-change GIF shows staged Inbox/Open states, not native pointer input or evidence of successful YAML writes.
+[Gallery](media/gallery.png) · [Calendar](media/calendar.png) · [Table](media/table.png) · [Project details](media/project.png) · [Create dialog](media/create.png) · [Property inspector](media/properties.png)
 
-All notes shown are fictional. The GIF uses key frames and does not demonstrate speed. More: [Gallery](media/gallery.png) · [Calendar](media/calendar.png) · [Table](media/table.png) · [Dark board](media/board-dark.png) · [Project details](media/project.png) · [Create dialog](media/create.png) · [Properties](media/properties.png).
+</details>
 
-### 0.1.2 desktop validation record
+## Installation
 
-- Coming, Personal, Fleeting and Overdue on Home now have search, filter, sort, property visibility and layout controls. Each section persists its own settings without changing normal task views or its underlying task scope. All 29 targeted logic checks passed.
-- Latest real-renderer Home regression: default light, default dark and Blue Topaz × 400/720/1200 px × four sections; all 36 toolbar boundary, focus and hit-test checks passed. These are container-width checks, not mobile acceptance.
-- The property inspector displays the user's mapped YAML key verbatim: mapping internal `due` to `deadline` reads, writes and labels `deadline`, with no separate display alias. All 40 mapping checks passed, including eight differently named fields.
-- Latest UI retest (2026-09-10): search/filter/maximum view-switch P95 was **54.6/34.6/59.3 ms at 1,000 tasks**, and **61.1/33.7/75.8 ms at 5,000**. Twenty samples each, synthetic in-memory data, real rendering and two animation frames; excludes disk indexing and process cold boot. Earlier figures below are historical baselines.
-- Colors follow Obsidian theme variables; layout and spacing stay scoped to Harbor. Tested themes do not imply universal third-party theme compatibility; custom CSS can still conflict.
+Try Harbor in a test vault first. Enable the **Bases** core plugin for related-task tables embedded in project notes.
 
-- Follow-up dialog checks passed 33/33: three themes, task/project/resource create dialogs at 400/720/1080 px, and project details at 720/1080 px. Fixed missing visible keyboard focus on several buttons and project controls. These are component-width checks, not physical mobile or every application viewport.
+### Install with BRAT
 
-- Consistent navigation, toolbar and theme-aware styling. Board, gallery, table and timeline render in batches; search and filters still cover every match. Scroll or use the keyboard-accessible Load more button.
-- Fixes late-metadata cache invalidation, date writes on cancelled calendar drags, and project windows covering create dialogs.
-- Local Windows / Obsidian 1.13.7 diagnostics: hot search, filtering and view switches had **33.5–55.4 ms P95 at 1,000 tasks**, and **33.6–75.5 ms at 5,000** (20 samples each). These use synthetic in-memory metadata and real rendering, including two animation frames. They exclude input debounce, initial disk indexing and application cold boot; they are not guarantees for other devices.
-- Three directory modes, creation/writes, saved-view reload and 30 window-open/close cycles passed. All 54 focus, control hit-testing and scroll checks passed across default light/dark and Blue Topaz, 400/720/1200 px containers and six workbench pages. Fixed narrow-form actions covering the body field. This matrix does not cover every combination of every dialog.
-- Follow-up tests with real Markdown files on disk: maximum hot-operation P95 **49.7 ms at 1,000 tasks**, **76.0 ms at 5,000**. Metadata was already ready; this is not application cold boot. All 54 toolbar/form horizontal-boundary checks across three themes, three container widths and six pages passed; this is not full interaction acceptance.
-- The user verified native single-card, multi-card and calendar drops. After a process restart, 1,000 disk tasks became usable in **1,891.4 ms** from renderer navigation time origin (one sample; Windows file cache not flushed; excludes launcher time). Actual BRAT install/update checks follow a Release. Physical mobile devices and live Notion sync are outside this round.
+1. Install and enable [BRAT](https://github.com/TfTHacker/obsidian42-brat).
+2. Run **BRAT: Add a beta plugin for testing**.
+3. Enter `nbclass986/harbor`.
+4. Enable **Harbor** in Community plugins after installation.
 
----
+Use **BRAT: Check for updates to all beta plugins** for updates. Actual BRAT installation and automatic updates have not yet been validated in this test round.
 
-## The idea
+### Manual installation
 
-| View | What it does |
-| --- | --- |
-| Board | Columns by status, priority, or assignee. Drag a card to write YAML. |
-| Gallery | Browse cards. |
-| Calendar | Month / week / day / agenda / year. |
-| Table | A workspace table; project notes can also embed Bases to list related tasks. |
-| Timeline | Browse notes grouped by due-date month. |
-| Saved views | Keep a filter and sort. |
+Download `main.js`, `manifest.json` and `styles.css` from the [Release](https://github.com/nbclass986/harbor/releases/latest). Place them in your vault's `.obsidian/plugins/harbor/` folder, reload Obsidian and enable the plugin.
 
-| Type | YAML | Meaning |
+Use these three attached files, not GitHub's automatically generated “Source code” archives.
+
+## Start with one project
+
+1. Click the Harbor ribbon icon or run **Open Harbor**.
+2. Create a project, such as “Launch my website”.
+3. Add a task, such as “Draft homepage copy”, and link it to the project.
+4. Set a status, priority and dates, then arrange your work on the board or calendar.
+5. Configure filters and sorting, and save a view you can return to.
+
+Harbor uses three note types: **Project** for an outcome, **Task** for a next action and **Resource** for reference material. The workflow draws on PRT, GTD and PARA, but you do not need to learn those methods before getting started.
+
+Home provides Coming, Personal, Fleeting and Overdue sections. Each keeps its own search, filters, sorting, visible properties and layout. These controls work within the section's existing task scope and do not change other views.
+
+## Keep your own YAML names
+
+Field mapping connects a **Harbor internal field** to the **actual YAML key in your notes**.
+
+| Harbor internal field | Example YAML key | Property inspector label |
 | --- | --- | --- |
-| Project | `type: project` | An outcome, with tasks under it |
-| Resource | `type: resource` | Reference material |
-| Task | `type: task` | A next action, optionally under a project |
+| `status` | `workflow_state` | `workflow_state` |
+| `due` | `deadline` | `deadline` |
+| `assignee` | `负责人` | `负责人` |
 
-Flow: capture in `Inbox`, then Task / Project / Resource, then `Inbox` → `Open` → `Doing` → `Done` on the board. Due dates and the calendar pick what to do today.
+If your notes use `deadline`, enter `deadline` in the mapping for `due`. Harbor reads and writes that key, and the property inspector displays `deadline` rather than a separate display alias.
 
-YAML keys can be renamed in settings, for example `due` → `截止日期`.
+**Changing a mapping does not bulk-rename existing notes.** Check the actual YAML keys before configuring their mappings.
 
----
+<details>
+<summary>Example task note using the default fields</summary>
 
-## Install
+This example uses default keys. If you change a mapping, use the corresponding actual key in your notes.
 
-Use [BRAT](https://github.com/TfTHacker/obsidian42-brat): add [`nbclass986/harbor`](https://github.com/nbclass986/harbor), then enable **Harbor**. Updates: **BRAT: Check for updates to all beta plugins**.
-
-Or download `main.js`, `manifest.json`, and `styles.css` from [Releases](https://github.com/nbclass986/harbor/releases) into `Vault/.obsidian/plugins/harbor/`. Starting with 0.1.2, Obsidian 1.9.10+ is required. Enable the **Bases** core plugin for related-task tables embedded in project notes.
-
-Try it in a test vault first. Mobile behavior still needs full validation. Notion sync is experimental and disabled by default; enabling and running it exchanges selected note content with the Notion API.
-
----
-
-## First launch
-
-Harbor creates `Harbor/Harbor_TASK`, `Harbor/Harbor_PROJECT`, `Harbor/Harbor_RESOURCE`, and `Harbor/Harbor_BASE`. Open it from the ribbon, or run **Open Harbor**.
-
-Default layout is **Hybrid**. **Central** only reads the three Harbor folders. **Scattered**: pick a folder when you create a project; Harbor makes a project folder with the project note, plus `task/` and `resource/` for notes linked to it.
-
----
-
-## A task note
-
-```yaml
+```markdown
 ---
 type: task
 status: Open
 priority: P2
-due: 2026-08-26
-start: 2026-08-20
+due: 2026-09-25
+start: 2026-09-18
 project:
-  - "[[Draft paper]]"
-assignee: Alice
-participant: Bob
+  - "[[Launch my website]]"
+assignee: Alex
 tags: writing
 ---
 ## Goal
 
-Write the intro
+Draft homepage copy.
 ```
 
-Status: `Inbox`, `Open`, `Doing`, `Done`. Priority: `P1`, `P2`, `P3`. The file name is the note title; the body does not repeat it as an H1. New projects embed `Harbor_TASK.base`, and under Tasks you get **New task** and **New resource** (assignee and participant come from the project; new tasks default to Open and P2).
+The file name is the note title. Default statuses are `Inbox`, `Open`, `Doing` and `Done`; priorities are `P1`, `P2` and `P3`.
 
----
+</details>
 
-## What you can do
+## Fit Harbor to your vault
 
-Switch board, gallery, and calendar. Drag cards. Filter, sort, and save views. The property bar title shows `task: filename` (or project / resource) and can change `type`. Open a project to see its tasks, or create a task or resource from the project note. Mini calendar. Tab, sidebar, or floating window. Templates use `{{title}}` and `{{body}}`; if `{{body}}` is missing, create-form text goes under the heading set in Settings.
+| Directory mode | Organization |
+| --- | --- |
+| Hybrid (default) | Creates notes in Harbor's category folders and also recognizes notes matching the type configuration elsewhere in the vault |
+| Central | Reads only the configured task, project and resource folders |
+| Scattered | Lets you choose a location for a new project, then creates its folder with `task` and `resource` subfolders |
 
----
+Default folders are `Harbor/Harbor_TASK`, `Harbor/Harbor_PROJECT`, `Harbor/Harbor_RESOURCE` and `Harbor/Harbor_BASE`. They can be changed in Settings.
 
-## Settings
+You can also configure statuses, priorities, people, tags, property-inspector fields and templates for all three note types. Templates support `{{title}}` and `{{body}}`; without `{{body}}`, text from the create form is inserted under the configured heading.
 
-Language, YAML keys, property-bar fields, folders, file layout, vault scan, status / priority / people / tags, the three body templates, and **Insert body under heading** for each template.
+Colors follow Obsidian's theme, while layout styles stay scoped to Harbor. Default light, default dark and Blue Topaz have been checked; compatibility with every third-party theme or custom CSS snippet is not guaranteed.
 
----
+## Current status and limitations
+
+- **Desktop:** Core features, field mapping, themes and narrow containers were checked on Windows / Obsidian 1.13.7. Native single-card, multi-card and calendar drops were confirmed by the user on their machine.
+- **Mobile:** Physical mobile testing is pending. A narrow-container test is not a phone test.
+- **BRAT:** Installation assets are available in Releases; client installation and automatic updates still need separate validation.
+- **Notion:** Sync is experimental and disabled by default. Enabling and running it exchanges selected note content with the Notion API. Live sync was not tested in this round.
 
 ## Feedback and license
 
-Include your Harbor and Obsidian versions, operating system, reproduction steps, and a screenshot or sample note without private content. Do not upload Notion tokens or the plugin's `data.json`.
+Questions, ideas and bug reports are welcome in [Issues](https://github.com/nbclass986/harbor/issues). Include Harbor and Obsidian versions, your operating system, reproduction steps and a screenshot or sample note with private information removed. **Do not upload Notion tokens or the plugin's `data.json`.**
 
-Starting with 0.1.2, the [Public Trial License](LICENSE) allows free personal and internal workplace use, but does not grant permission to redistribute, sell, or publish modified copies. Development source code is not currently published; any future source release will be announced separately. Versions 0.1.0 and 0.1.1 retain their original MIT license.
+The current [Public Trial License](LICENSE) allows free personal and internal workplace use, but does not grant permission to redistribute, sell or publish modified copies. Development source is not currently published; any future source release will be announced separately. Earlier versions released under MIT retain their original license.
