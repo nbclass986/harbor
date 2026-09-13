@@ -1714,7 +1714,7 @@ button.nbclass-prop-dropdown-trigger {
 .nbclass-shell .nbclass-rail-item div { color: inherit !important; font-size: 11px !important; }
 .nbclass-shell .nbclass-rail-item:hover,
 .nbclass-shell .nbclass-rail-item[aria-pressed="true"] {
-  background: var(--background-modifier-hover) !important; color: var(--text-accent);
+  background: var(--background-modifier-hover) !important; color: var(--nbclass-logo-bg);
 }
 .nbclass-rail-icon { display: flex; }
 .nbclass-rail-icon svg { width: 20px; height: 20px; stroke-width: 1.7; }
@@ -1829,7 +1829,7 @@ button.nbclass-prop-dropdown-trigger {
 .nbclass-shell .nbclass-rail-item[aria-pressed="true"] {
   background: var(--harbor-accent-soft) !important;
   box-shadow: inset 3px 0 0 var(--interactive-accent);
-  color: var(--text-normal);
+  color: var(--nbclass-logo-bg);
 }
 .nbclass-shell .nbclass-database-chrome-row {
   background: var(--harbor-surface) !important;

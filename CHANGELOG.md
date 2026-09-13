@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.10
+
+- Reorder the left sidebar to Home, Projects, Tasks, New, Views, Settings and unify hover/selected colors with the Harbor logo accent.
+- Use the native view-tab context menu for Rename, Duplicate view and Delete view. Rename inline with Enter to save or Escape to cancel; disable deletion of the last view of a kind.
+- Copy view configuration independently when duplicating a view.
+- Reorganize the README with a linked contents list and real-interface GIF tutorials for existing property mappings, scanning values, custom panel fields and new-vault setup.
+
+Type checking, production build and distribution checks passed. Sidebar order, view menu/rename, layout switching, property-panel reopening, mapped-value scanning and custom-field writeback were exercised in the Windows test vault. BRAT updates, physical mobile testing and full regression remain pending.
+
 ## 0.1.9
 
 - Add a checked Harbor Property panel toggle to the Markdown note's three-dot menu, so closed panels can be reopened there.

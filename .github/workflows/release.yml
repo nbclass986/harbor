@@ -35,11 +35,14 @@ jobs:
           body: |
             ## Harbor ${{ github.event.release.tag_name || github.ref_name }}
 
-            - Markdown 笔记右上角三个点菜单新增“Harbor 属性面板”开关，勾选表示已打开，可随时关闭或重新打开。
-            - 关闭面板后保持关闭状态，避免自动刷新时再次弹出。
+            - 左侧栏调整为：导航 → 项目 → 任务 → 新建 → 视图 → 设置，统一悬停与选中配色。
+            - 顶部视图标签右键菜单提供“重命名、复制视图、删除视图”；支持直接输入名称，复制保留配置，最后一个同类视图不可删除。
+            - README 增加可点击目录，以及已有属性映射、扫描取值、自定义面板属性和新库入门的实拍步骤 GIF。
 
-            Add a checked Harbor Property panel toggle to the Markdown note menu.
-            Keep the panel closed during refreshes until explicitly reopened.
+            Reorder the sidebar and unify its accent colors. Add native view-tab actions
+            for inline renaming, independent duplication and guarded deletion.
+
+            [开箱教程 / Guide](https://github.com/nbclass986/harbor#开箱使用教程)
 
             **安装 / Install:** BRAT 仓库地址 `nbclass986/harbor`，或将下面三个文件放入 `.obsidian/plugins/harbor/`。
             Use BRAT with `nbclass986/harbor`, or copy the three attached files into `.obsidian/plugins/harbor/`.
