@@ -19,6 +19,10 @@ const allowed = new Set([
   'media/quickstart/04-properties.gif',
   'media/quickstart/05-views.gif',
   'media/quickstart/06-daily.gif',
+  'media/quickstart/07-map-existing.gif',
+  'media/quickstart/08-scan-values.gif',
+  'media/quickstart/09-custom-field.gif',
+  'media/quickstart/10-write-back.gif',
 ]);
 const files = execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '-z'],
   { encoding: 'utf8' }).split('\0').filter(Boolean);
