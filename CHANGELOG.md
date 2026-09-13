@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.9
+
+- Add a checked Harbor Property panel toggle to the Markdown note's three-dot menu, so closed panels can be reopened there.
+- Keep the panel closed during automatic refreshes until explicitly reopened.
+
+Type checking, production build and distribution checks passed. Live Obsidian UI testing remains pending.
+
 ## 0.1.8
 
 - Rename the project property control to Property panel and simplify Chinese property-mapping terminology.

@@ -35,13 +35,11 @@ jobs:
           body: |
             ## Harbor ${{ github.event.release.tag_name || github.ref_name }}
 
-            - 首次启用时自动创建“闪念胶囊”项目，默认位置为 `Harbor/Harbor_PROJECT/闪念胶囊.md`，旧用户升级后也会补建一次。
-            - 使用当前 YAML 类型映射与项目模板；已有同名笔记不覆盖、不重复创建，初始化后主动删除也不会自动重建。
-            - 项目窗口中的属性入口统一称为“属性面板”，设置中的中文字段说明改用“笔记属性名”，更方便入门用户理解。
+            - Markdown 笔记右上角三个点菜单新增“Harbor 属性面板”开关，勾选表示已打开，可随时关闭或重新打开。
+            - 关闭面板后保持关闭状态，避免自动刷新时再次弹出。
 
-            Automatically create the 闪念胶囊 capture project on first initialization,
-            using current YAML mappings and the project template. Existing notes are preserved;
-            deleting the project after initialization does not cause it to be recreated.
+            Add a checked Harbor Property panel toggle to the Markdown note menu.
+            Keep the panel closed during refreshes until explicitly reopened.
 
             **安装 / Install:** BRAT 仓库地址 `nbclass986/harbor`，或将下面三个文件放入 `.obsidian/plugins/harbor/`。
             Use BRAT with `nbclass986/harbor`, or copy the three attached files into `.obsidian/plugins/harbor/`.
